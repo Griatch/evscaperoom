@@ -182,9 +182,9 @@ class TestEvscaperoomCommands(CommandTest):
         self.call(commands.CmdSpeak(), "HELLO!", "You shout: HELLO!", cmdstring="shout")
 
         self.call(commands.CmdSpeak(), "Hello to obj",
-                  "You say (to Obj): Hello", cmdstring="say")
+                  "You say: Hello", cmdstring="say")
         self.call(commands.CmdSpeak(), "Hello to obj",
-                  "You shout (to Obj): Hello", cmdstring="shout")
+                  "You shout: Hello", cmdstring="shout")
 
     def test_emote(self):
         self.call(commands.CmdEmote(),

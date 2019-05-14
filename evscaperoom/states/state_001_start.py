@@ -297,7 +297,7 @@ class HintberryPlate(objects.Edible, objects.Readable, objects.Usable):
 WINDOWS_DESC = """
 At first glance, the two windows seem possible avenues of escape. But even
 though they let in a lot of light, that light enters through a beautiful but
-sturdy *metalwork just outside the glass. Intervoven into the metalwork are
+sturdy *metalwork just outside the glass. Interwoven into the metalwork are
 climbing roses that further limit the view. Above each window is a wooden bar
 that might have held curtains at one point, but none can be seen anymore.
 
@@ -324,7 +324,7 @@ There is no-one around except a *scarecrow with a decidedly weird look.
 
 WINDOWS_LISTEN = """
 You listen at the small opening you can make in the window, but all you hear
-are the chirps of birds, the rhustling of leaves and maybe a faint hiss from
+are the chirps of birds, the rustling of leaves and maybe a faint hiss from
 the nearby river.
 """
 
@@ -1430,14 +1430,14 @@ STATUE_DESC = """
 By the shadow-side *window, not far from the *closet, stands a curious monkey
 statue, reaching you to your waist. It is carved mostly from wood but the
 joints, tail and head are linked with wire so they can be moved. It's like a
-huge version of one of the children's toys Mr Warwick makes after work.
+huge version of one of the children's toys Mr Warwick makes.
 
 The wooden toy monkey is dressed in a red jacket and a conical hat.
 """
 
 STATUE_TAIL = """
 The tail is made of thick strands of rope, mixed with metal wire to make it
-hold its position. You wonder if this thing actually exists anywhere and how it
+hold its position.
 """
 
 STATUE_FACE = """

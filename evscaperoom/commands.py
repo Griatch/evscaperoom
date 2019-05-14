@@ -278,50 +278,37 @@ class CmdWho(CmdEvscapeRoom, default_cmds.CmdWho):
         caller.msg(txt)
 
 
-class CmdSpeak(CmdEvscapeRoom):
+class CmdSpeak(Command):
     """
     Perform an communication action.
 
     Usage:
-      say <text> [to <target>]
-      whisper      "
-      shout       at    "
+      say <text>
+      whisper
+      shout
 
     """
     key = "say"
     aliases = [";", "shout", "whisper"]
     arg_regex = r"\w|\s|$"
 
-    obj1_search = False
-    obj2_search = None
-
     def func(self):
 
+        args = self.args.strip()
         caller = self.caller
         action = self.cmdname
         action = "say" if action == ';' else action
+        room = self.caller.location
 
-        if not self.arg1:
+        if not self.args:
             caller.msg(f"What do you want to {action}?")
             return
 
-        if self.obj2:
-            if self.obj2 == self.room:
-                message = f"~You ~{action} ({self.prep} the room): {self.arg1}"
-            else:
-                # input on form text preposition target
-                message = f"~You ~{action} ({self.prep} {self.obj2.key}): {self.arg1}"
-            target = self.obj2
-        else:
-            message = f"~You ~{action}: {self.arg1}"
-            target = self.room
+        message = f"~You ~{action}: {args}"
 
-        if hasattr(self.room, "msg_room"):
-            self.room.msg_room(caller, message)
-            self.room.log(f"{action} by {caller.key}: {message}")
-
-        if hasattr(target, "at_speech"):
-            target.at_speech(caller, action)
+        if hasattr(room, "msg_room"):
+            room.msg_room(caller, message)
+            room.log(f"{action} by {caller.key}: {message}")
 
 
 class CmdEmote(Command):
@@ -367,6 +354,7 @@ class CmdEmote(Command):
         room = self.caller.location
 
         characters = room.get_all_characters()
+        logged = False
         for target in characters:
             txt = []
             self_refer = False
@@ -395,8 +383,9 @@ class CmdEmote(Command):
                 else:
                     txt = [f"{player_clr}{self.caller.get_display_name(target)}|n "] + txt
             txt = "".join(txt).strip() + ("." if add_period else "")
-            if hasattr(self.caller.location, "log"):
+            if not logged and hasattr(self.caller.location, "log"):
                 self.caller.location.log(f"emote: {txt}")
+                logged = True
             target.msg(txt)
 
 
