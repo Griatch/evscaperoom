@@ -1,4 +1,4 @@
-# EvScapeRoom
+# EvscapeRoom
 
 Created for the MUD Coders Guild game Jam, April 14-May 15 2019. The theme for
 the jam was "One Room".
