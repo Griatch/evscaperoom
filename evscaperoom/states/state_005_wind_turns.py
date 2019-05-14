@@ -64,6 +64,10 @@ class WindowsCoverable(Windows):
 
     def at_cover(self, caller, item):
         """ Called by the objects used to cover it (blanket, bathtowel) """
+        if item in self.db.covering_objects:
+            self.msg_char(caller, "You have already used that.")
+            return
+
         self.db.covering_objects.append(item)
         if len(self.db.covering_objects) > 1:
             self.room.score(2, "covered windows")
