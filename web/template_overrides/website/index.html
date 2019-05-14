@@ -1,0 +1,147 @@
+{% extends "website/base.html" %}
+
+{% block titleblock %}Home{% endblock %}
+
+{% block header_ext %}
+{% endblock %}
+
+{% block content %}
+<div class="row">
+  <div class="col">
+    <div class="card">
+      <div class="card-body">
+        <h1 class="card-title text-center">Get out and eat the pies!</h1>
+
+        <hr />
+
+        <p class="lead text-center">
+        Welcome to <I>Evscaperoom</I>, a light-hearted "escape room" with some unexpected twists and a full story. 
+        <em>
+         <p class="text-center">
+         The <a href="https://www.deviantart.com/griatch-art/art/Say-hi-to-Mrs-Buttons-153984575">Jester</a> 
+            wants to win your village's pie-eating contest. You
+            are one of her most dangerous opponents.<br> She tricked you over to
+            her cabin outside of town and now you are locked in!</p>
+         <p class="text-center">
+           You look around. The place seems set up to challenge you. No doubt
+           she'll mock you endlessly if you can't figure a way out of
+           here.<br>This is beyond her usual pranks though - she's been
+           planning this for a while, that much is clear.</p>
+         <p class="text-center">
+         <strong>
+          Find your way out of the Jester's cabin in time for the pie-eating
+          contest. Beat her at her own game!</strong><br>Maybe you'll dig up a dark
+        secret or two about your village while you're at it. And eat a pie or two.</p>
+         </em>
+         <hr>
+        <p>
+          This game was created in slightly less than a month (April 17 to May 15 2019) for the 
+          <a href="https://mudcoders.com/">MUD Coder's Guild</a>'s <a href="https://itch.io/jam/enterthemud2">Game Jam</a>. 
+          The theme for this jam was <em>One Room</em>. 
+        </p>
+        <dl class="row">
+          <dt class="col-sm-3">Web client</dt>
+          <dd class="col-sm-9"><a href="{% url 'webclient:index' %}">HTML5 client</a></dd>
+          <dt class="col-sm-3">Telnet</dt>
+          <dd class="col-sm-9"><strong>experimental.evennia.com:4000</strong></dd>
+          <dt class="col-sm-3">Contact</dt>
+          <dd class="col-sm-9">Let me know what you think! You can find me <a href="http://www.evennia.com/chat-redirect-3">In the Evennia dev channel</a>. 
+          You can also ping me on the MUD Coder's Guild Slack channel.</dd>
+          <dt class="col-sm-3">Report bugs</dt>
+          <dd class="col-sm-9">If you find bugs you can report them to the <a href="https://github.com/evennia/evennia/issues">Evennia bug tracker</a> for now. </dd>
+          <dt class="col-sm-3">Source code</dt>
+          <dd class="col-sm-9"><a href="https://github.com/Griatch/evscaperoom">Github</a>. This is an Evennia game dir. Read 
+          install instructions in the README. The parts of the code created for this jam is almost all 
+          contained <a href="https://github.com/Griatch/evscaperoom/tree/master/evscaperoom">in this folder</a>.</dd>
+          <dt class="col-sm-3">Licence</dt>
+          <dd class="col-sm-9"><a href="https://github.com/Griatch/evscaperoom/blob/master/LICENSE">BSD licenced</a>.</dd>
+          <dt class="col-sm-3">Game Features</dt>
+          <dd class="col-sm-9">
+            <p>Create a new room to play from start or join an existing one.
+            <p>Work together to escape the room or play solo. Collaborate with
+            free-form emoting or say/whisper/shouts.</p>
+            <p>Lots of possible actions, including standing/climbing/lying down on things.</p>
+            <p>Full pie-based help system if you get stuck.</p>
+            <p>Talking, somewhat creepy, monkeys.</p>
+            <p>Scoring, group/individual achievements and several different endings.</p>
+            <p>Several accessibility options for displaying items, as well as screenreader mode.</p>
+            <p>A (maybe surprisingly) layered story.</p>
+            <p>Pies. Lots of pies.</p>
+          </dd>
+          <dt class="col-sm-3">Technical</dt>
+          <dd class="col-sm-9">
+            <p>Coded in Python using the <a href="http://evennia.com">Evennia</a> library/server.</p>
+            <p>Newly coded mini-'engine' on top of Evennia for handling the escaperoom states as separate Python files.</p>
+            <p>Newly written, highly specialized input commands dynamically generated from the object being investigated</p>
+            <p>No inventory system - you cannot pick anything up (and then
+              log off ...). Instead you 'focus' on objects to operate on them
+              (similar to clicking on an item in a graphical adventure game).</p>
+            <p>Game is created entirely in code - no 'building'. Rooms are generated on the fly from 
+               code and are modified dynamically (but not procedurally) as the game continues.</p>
+            <p>Well documented code, with unit tests.</p>
+          </dd>
+        </dl>
+      </div>
+    </div>
+  </div>
+</div>
+
+<hr />
+
+<div class="row">
+  <div class="col-12 col-md-4 mb-3">
+    <div class="card">
+      <h4 class="card-header text-center">Accounts</h4>
+
+      <div class="card-body">
+        <p>
+          There's currently <strong>{{num_accounts_connected}}</strong> connected out of a total of <strong>{{num_accounts_registered}}</strong> account{{num_accounts_registered|pluralize}} registered.
+        </p>
+        <p>
+          Of these, <strong>{{num_accounts_registered_recent}}</strong> were created this week, and <strong>{{num_accounts_connected_recent}}</strong> have connected within the last seven days.
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <div class="col-12 col-md-4 mb-3">
+    <div class="card">
+      <h4 class="card-header text-center">Recently Connected</h4>
+
+      <div class="card-body px-0 py-0">
+        <ul class="list-group">
+          {% for account in accounts_connected_recent %}
+            <li class="list-group-item">{{account.username}}&mdash;<em>{{account.last_login|timesince}} ago</em></li>
+          {% endfor %}
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <div class="col-12 col-md-4 mb-3">
+    <div class="card">
+      <h4 class="card-header text-center">Database Stats</h4>
+
+      <div class="card-body py-0 px-0">
+        <ul class="list-group">
+          <li class="list-group-item">{{num_accounts_registered}} account{{num_accounts_registered|pluralize}} (+ {{num_characters}} character{{num_characters|pluralize}})</li>
+          <li class="list-group-item">{{num_rooms}} room{{num_rooms|pluralize}} (+ {{num_exits}} exits)</li>
+          <li class="list-group-item">{{num_others}} other objects</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="row">
+  <div class="col">
+    <div class="card">
+
+      <!--a href="https://www.deviantart.com/griatch-art/art/What-s-yer-name-298023707">
+      <img width="1080" src="https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/22916c25-6299-453d-a221-446ec839f567/d4xfokb-f24e1e10-9d1e-4238-92f3-693c19c57bd6.jpg/v1/fill/w_1024,h_862,q_75,strp/what_s_yer_name__by_griatch_art_d4xfokb-fullview.jpg?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7ImhlaWdodCI6Ijw9ODYyIiwicGF0aCI6IlwvZlwvMjI5MTZjMjUtNjI5OS00NTNkLWEyMjEtNDQ2ZWM4MzlmNTY3XC9kNHhmb2tiLWYyNGUxZTEwLTlkMWUtNDIzOC05MmYzLTY5M2MxOWM1N2JkNi5qcGciLCJ3aWR0aCI6Ijw9MTAyNCJ9XV0sImF1ZCI6WyJ1cm46c2VydmljZTppbWFnZS5vcGVyYXRpb25zIl19.3fZa0k25mlF0D9xIcZ5RVqy7ELNkTLIznPhGlj_F9Rg">
+      </a-->
+
+    </div>
+  </div>
+</div>
+{% endblock %}

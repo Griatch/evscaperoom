@@ -1,0 +1,49 @@
+{% comment %}
+Allow to customize the menu that appears at the top of every Evennia
+webpage. Copy this file to your game dir's web/template_overrides/website
+folder and edit it to add/remove links to the menu.
+{% endcomment %}
+{% load staticfiles %}
+<nav class="navbar navbar-dark font-weight-bold navbar-expand-md">
+    <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#menu-content" aria-controls="menu-content" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <a class="navbar-brand" href="/">
+      <div class="media">
+        <img class="d-flex navbar-brand-logo mx-3" src="{% static "website/images/evennia_logo.png" %}" alt="{{game_name}} logo" />
+        <div class="media-body">
+          {{ game_name }}<br />
+          <small>A game jam entry</small>
+        </div>
+      </div>
+    </a>
+
+    <div class="collapse navbar-collapse" id="menu-content">
+        <ul class="navbar-nav">
+            {% block nabvar_left %}
+            <li>
+              <a class="nav-link" href="{% url 'index' %}">Home</a>
+            </li>
+            <!-- evennia documentation -->
+            <li>
+              <a class="nav-link" href="https://github.com/evennia/evennia/wiki/Evennia-Introduction/">About Evennia</a>
+            </li>
+            <li><a class="nav-link" href="https://github.com/evennia/evennia/wiki">Evennia Documentation</a></li>
+            <!-- end evennia documentation -->
+            
+            <!-- end game views -->
+            
+            {% if webclient_enabled %}
+              
+            <li class="col-sm-9"><a class="nav-link btn btn-primary btn-lg" href="{% url 'webclient:index' %}">Eat some pie!</a></li>
+
+            {% endif %}
+            
+            {% if user.is_staff %}
+            <li><a class="nav-link" href="{% url 'admin:index' %}">Admin</a></li>
+            {% endif %}
+            {% endblock %}
+        </ul>
+    </div>
+</nav>
