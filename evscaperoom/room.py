@@ -46,12 +46,6 @@ class EvscapeRoom(EvscaperoomObject, DefaultRoom):
             "hints_total": 41,
             "total_achievements": 14
         }
-        # you can exit the room without getting a perfect score!
-        self.db.score = {}
-        self.db.max_score = 130  # sum of all possible score() calls
-        # number of total hints requested
-        self.db.hints = 0
-        self.db.hints_total = 0
 
         self.cmdset.add(CmdSetEvScapeRoom, permanent=True)
 
