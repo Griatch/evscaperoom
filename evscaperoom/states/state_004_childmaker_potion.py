@@ -498,14 +498,14 @@ The Jester writes:
 BOOK_MONKEY_TOY_NAME = """
 The Jester writes:
 
-    Still pondering what to name the toy got from Angus. It is kinda goofy-looking
-    and almost pathetic. I'm really tempted to name it after someone in the
-    village. But that sounds mean.
+    Still pondering what to name the toy I got from Angus. It is kinda
+    goofy-looking and almost pathetic. I'm really tempted to name it after
+    someone in the village. But that sounds mean.
 
-    Someone suggested I'd name the toy as revenge against the next person to make
-    me cry. Hah - then it'll never get named, I'm sure! But why not - if I ever
-    cry, it gets the name of the person that made me do it. Until then, I'll just
-    call my new pal CRYBABY.
+    Someone suggested I'd name the toy as revenge against the next person to
+    make me cry. Hah - then it'll never get named, I'm sure! But why not - if I
+    ever cry, it gets the name of the person that made me do it. Until then,
+    I'll just call my new pal CRYBABY.
 """
 
 BOOK_CRYBABY = """

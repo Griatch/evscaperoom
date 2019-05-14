@@ -1302,7 +1302,7 @@ this one is only water?
 
 BOTTLE_SMELL_FIVE = """
 You open the fifth bottle but immediately close it again, nose wrinkled. It's a
-very familiar smell, but it belongs in the outhouse, not in a bottle!
+very familiar smell, but this liquid belongs in the outhouse, not in a bottle!
 """
 
 BOTTLE_CANNOT_APPLY = """
