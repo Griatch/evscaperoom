@@ -26,20 +26,20 @@ GREETING = """
 """
 
 ROOM_DESC = """
-The |rJester's cabin|n is actually just a small single room with a |ydoor|n.
-Ample light enters from two |ywindow|ns on each side. The underside of the sloping
-roof is exposed (as are the |yrafters|n holding them up), making the place taller
+The |rJester's cabin|n is actually just a small single room with a *door.
+Ample light enters from two *windows on each side. The underside of the sloping
+roof is exposed (as are the *(rafters holding them up), making the place taller
 and feel more spacious than it is.
 
-On the wall opposite the door is a small stone |yfireplace|n, lined to the left
-and right side by a tall |ycloset|n and an area acting as a |ykitchen|n
-respectively. There is also a carver |ychair|n standing around.
+On the wall opposite the door is a small stone *fireplace, lined to the left
+and right side by a tall *closet and an area acting as a *kitchen
+respectively. There is also a carver *chair standing around.
 
-Just to the right of the door is the jester's messy |ybed|n and to the right is
-a long, empty-looking |ytable|n.
+Just to the right of the door is the Jester's messy *bed and to the right is
+a long, empty-looking *table.
 
-On the floor by the door is a plate on which sits a nicely smelling |yhintberry pie|n.
-|yVale|n has moved to stand just in front of the door, chattering to itself and
+On the floor by the door is a plate on which sits a nicely smelling hintberry *pie.
+*Vale has moved to stand just in front of the door, chattering to itself and
 waving its arms above its head, excitedly.
 
 """

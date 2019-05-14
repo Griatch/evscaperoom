@@ -870,7 +870,7 @@ class State(BaseState):
             Slate, key="slate")
         slate.db.desc = SLATE_DESC.strip()
         poster = self.create_object(
-            Poster, key="wanted poster", aliases=["poster"])
+            Poster, key="poster", aliases=["wanted poster"])
         poster.db.desc = POSTER_DESC.strip()
         book = self.create_object(
             Book, key="book", aliases='lexicon')
