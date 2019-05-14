@@ -184,7 +184,7 @@ class Bowl(objects.Rotatable, objects.Readable, objects.Mixable):
     ]
 
     def at_mix(self, caller, ingredient, **kwargs):
-        self.msg_room(caller, BOWL_MIX.format(**kwargs))
+        self.msg_room(caller, BOWL_MIX.format(**kwargs).strip())
 
     def at_mix_failure(self, caller, ingredient, **kwargs):
         self.room.achievement(caller, "Clutz", "Botched making the childmaker potion")
@@ -810,6 +810,7 @@ interest you.
 STATE_HINT_LVL2 = """
 Read the book for |wrecipe|n. The 'childmaker' potion requires some weird
 ingredients.  We already have a *bowl. Look at the bottles in the *kitchen.
+Be aware of those labels though, better not trust them ...
 """
 
 STATE_HINT_LVL3 = """

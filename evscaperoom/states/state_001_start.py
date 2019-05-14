@@ -717,10 +717,10 @@ class Socks(objects.Feelable, objects.Smellable, objects.Usable):
         self.room.score(2, "mix childlike ingredient")
         target.handle_mix(
             caller, self,
-            ingredient="one of the Jester's socks",
+            txt_ingredient="one of the Jester's socks",
             color="purple",
             smell="soap",
-            extra=("You feel that sacrificing her sock is but a small part of the "
+            extra=("You feel that sacrificing her sock is but a small part of the \n"
                    "payback the Jester sorely deserves at this point."))
 
     def at_cannot_apply(self, caller, action, target):
