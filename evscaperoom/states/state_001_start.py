@@ -50,7 +50,7 @@ GREETING = """
     |wEscape the Jester's cabin|n in some clever way and beat that damned
     Jester at her own game!
 
-    |x(enter 'help' for help to play)|n
+    (enter 'help' for help to play)
 """
 
 # ------------------------------------------------------------
