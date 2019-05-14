@@ -1786,7 +1786,7 @@ to pick out what the symbols mean.
 :    "          |      ^ ^ ^ ^ ^     :
 :            "   \     |wH|n ^ ^ ^ ^     :
 :        "       /        ^ ^ ^      :
-:         |wH|n      \       ^ ^ ^        :
+:         |wH|n      \       ^ ^ ^       :
 :    "            \      ^ ^         :
 :                                    :
 :    *  village          |wH|n  house    :
