@@ -813,7 +813,7 @@ ingredients.  We already have a *bowl. Look at the bottles in the *kitchen.
 """
 
 STATE_HINT_LVL3 = """
-The Jester has swapped those lables around. Smell them to find out who's who:
+The Jester has swapped those lables around. Smell them to find out what's what:
 
 - The liquified carcass smells horrible.
 - The fool's favorite perfume is rose-water. So it smells like roses (duh)
