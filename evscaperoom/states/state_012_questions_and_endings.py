@@ -797,12 +797,12 @@ class CmdHandleEnding(CmdEvscapeRoom):
     """
     Ask questions - capture all input
     """
-    key = syscmdkeys.CMD_NOMATCH
-    aliases = [syscmdkeys.CMD_NOINPUT]
+    key = "_startending"
 
     def func(self):
 
         caller = self.caller
+
         room = self.room
 
         caller.msg(INTRO_TEXT2.strip())
@@ -905,7 +905,11 @@ class State(BaseState):
 
     def init(self):
 
-        self.room.cmdset.add(EndingCmdSet)
+        for char in self.room.get_all_characters():
+            # we can't have this cmdset on the room, the
+            # interactivity of it gets cross-used.
+            char.cmdset.add(EndingCmdSet)
+            char.execute_cmd("_startending")
 
         # we need to stop Vale's chatter
         vale = self.get_object("Vale")
