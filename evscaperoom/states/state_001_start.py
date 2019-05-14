@@ -1150,10 +1150,10 @@ class Closet(objects.CodeInput, objects.Readable):
 # ------------------------------------------------------------
 
 KITCHEN_DESC = """
-To the right of the *fireplace and next to the sun-side *window, is a deep wooden
-shelf meant for preparing and eating food - there is even a red-painted carver
-*chair in front of it. Right now there are no kitchen utensils here though - the
-bench is empty except for five little glass bottles and an animal skull.
+To the right of the *fireplace and next to the sun-side *window, is a deep
+wooden shelf meant for preparing and eating food.
+Right now there are no kitchen utensils here though - the bench is empty except
+for five little glass bottles and an animal skull.
 
 """
 
