@@ -508,9 +508,11 @@ class Rafters(objects.Feelable):
                 self.room.state.create_object(HiddenCoin, key="coin")
                 self.set_flag("found_coin")
             self.room.score(1, "looked at rafters from on high")
-            return super().return_appearance(caller, desc=RAFTERS_STAND_DESC.strip(), **kwargs)
+            kwargs['desc'] = RAFTERS_STAND_DESC.strip()
+            return super().return_appearance(caller, **kwargs)
         else:
-            return super().return_appearance(caller, desc=RAFTERS_DESC.strip(), **kwargs)
+            kwargs['desc'] = RAFTERS_DESC.strip()
+            return super().return_appearance(caller, **kwargs)
 
 
 # ------------------------------------------------------------
