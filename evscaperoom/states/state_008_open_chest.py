@@ -133,6 +133,7 @@ class LeverMovable(Lever):
             if self.check_sequence():
                 self.msg_room(caller, LEVER_SUCCEED.format(direction=args).strip())
             else:
+                self.db.sequence = []
                 self.msg_room(caller, LEVER_RESET.strip())
 
     def at_focus_rotate(self, caller, **kwargs):
