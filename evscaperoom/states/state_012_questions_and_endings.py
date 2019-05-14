@@ -70,7 +70,6 @@ def display_score(scoreboard):
             lines.append("")
         else:
             lines.append(ANSIString(line).center(80, " "))
-    print(lines)
     return add_msg_borders(ANSIString("\n").join(lines))
 
 

@@ -36,6 +36,7 @@ SERVERNAME = "evscaperoom"
 
 TYPECLASS_PATHS += ["evscaperoom"]
 
+IDLE_TIMEOUT = 7 * 24 * 3600
 
 ######################################################################
 # Settings given in secret_settings.py override those in this file.
