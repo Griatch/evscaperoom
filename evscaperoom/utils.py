@@ -37,7 +37,8 @@ def create_evscaperoom_object(typeclass=None, key="testobj", location=None,
     """
     if not (callable(typeclass) or
             typeclass.startswith("evennia") or
-            typeclass.startswith("typeclasses")):
+            typeclass.startswith("typeclasses") or
+            typeclass.startswith("evscaperoom")):
         # unless we specify a full typeclass path or the class itself,
         # auto-complete it
         typeclass = _BASE_TYPECLASS_PATH + typeclass
