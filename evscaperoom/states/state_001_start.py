@@ -1387,7 +1387,7 @@ class Chair(objects.Movable, objects.Sittable, objects.Kneelable, objects.Climba
         obj, pos = self.get_position(caller)
         if pos:
             self.set_position(caller, None)
-            self.msg_room(caller, "~You ~step of the *chair.")
+            self.msg_room(caller, "~You ~step off the *chair.")
 
     def at_move_door(self, caller):
         self._step_off(caller)
