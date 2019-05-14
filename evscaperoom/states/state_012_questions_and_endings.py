@@ -821,7 +821,8 @@ class CmdHandleEnding(CmdEvscapeRoom):
             confirm = yield(cnf + f"Is this what you think? |g[Y]|n/|rN|n")
             if not confirm or confirm.upper() in ('Y', 'YES'):
                 break
-        answer = ANSWER_MAP_QUESTION_1.get(reply1.lower(), "OTHER")
+        answer = ANSWER_MAP_QUESTION_1.get(reply1.strip().lower(), "OTHER")
+        room.log(f"Question 1: {caller} answered '{reply1.strip()}' ({answer})")
         room.set_character_flag(caller, "question1", value=answer)
 
         # question two
@@ -837,7 +838,8 @@ class CmdHandleEnding(CmdEvscapeRoom):
             confirm = yield(cnf + "Is this what you think? |g[Y]|n/|rN|n")
             if not confirm or confirm.upper() in ('Y', 'YES'):
                 break
-        answer = ANSWER_MAP_QUESTION_2.get(reply2.lower(), "OTHER")
+        answer = ANSWER_MAP_QUESTION_2.get(reply2.strip().lower(), "OTHER")
+        room.log(f"Question 2: {caller} answered '{reply2.strip()}' ({answer})")
         room.set_character_flag(caller, "question2", value=answer)
 
         # question three
@@ -853,7 +855,8 @@ class CmdHandleEnding(CmdEvscapeRoom):
             confirm = yield(cnf + "Is this what you think? |g[Y]|n/|rN|n")
             if not confirm or confirm.upper() in ('Y', 'YES'):
                 break
-        answer = ANSWER_MAP_QUESTION_3.get(reply3.lower(), "OTHER")
+        answer = ANSWER_MAP_QUESTION_3.get(reply3.strip().lower(), "OTHER")
+        room.log(f"Question 3: {caller} answered '{reply3.strip()}' ({answer})")
         room.set_character_flag(caller, "question3", value=answer)
 
         # get individualized stats
