@@ -192,14 +192,69 @@ class CabinDoorOpenable(objects.Openable):
 
 
 STATE_HINT_LVL1 = """
-Almost there now!
+You heated the cauldron, maybe time to look inside it?
 
-The fire sure heated the *cauldron! Maybe time to examine it again?
+... what, you thought it was more complex than that?
+
+Maybe the next piece of pie will be more informative though.
 """
 
 STATE_HINT_LVL2 = """
-Dig around in the *cauldron to find the room *key. Use it to unlock the front
-*door and leave! Congrats!
+Open the door with *key you found in the *cauldron.
+
+Yep, there is no more trick to it.
+
+But the NEXT piece of pie will have something really interesting.
+"""
+
+STATE_HINT_LVL3 = """
+Open the door and step outside.
+
+Yeah, that's usually how doors work. Enjoy the sunshine!
+
+On the other hand, the piece of pie you eat after this one will bring the
+really juicy intel.
+"""
+
+STATE_HINT_LVL4 = """
+Actually not not this one, but the next one for sure.
+"""
+
+STATE_HINT_LVL5 = """
+This pie gives you no further insight. But you can't be SURE the next pie is
+not giving you the answer to the FINAL MYSTERY, can you.
+"""
+
+STATE_HINT_LVL6 = """
+So here's the big secret, finally:
+
+Every pie you eat makes it harder for you to beat the Jester in the pie-eating
+contest. That's pretty obvious when you think about it. 
+
+... So, no, that was not really the secret. Have one more slice and uncle pie
+will tell you.
+
+"""
+
+STATE_HINT_LVL7 = """
+... or not. The pie has got you good. We could be doing this all day.
+"""
+
+STATE_HINT_LVL8 = """
+There really is no reward at the end of this. Just a very aching tummy. This
+is the final hint you are gonna get, promise.
+"""
+
+STATE_HINT_LVL9 = """
+So that was a lie. But THIS is the last one.
+"""
+
+STATE_HINT_LVL10 = """
+Hey, how many slices are IN this pie anyway ... ?
+"""
+
+STATE_HINT_LVL11 = """
+The pie is just messin' with you, you know. Wobble out of here now.
 """
 
 
@@ -208,13 +263,22 @@ class State(BaseState):
     next_state = "state_012_questions_and_endings"
 
     hints = [STATE_HINT_LVL1,
-             STATE_HINT_LVL2]
+             STATE_HINT_LVL2,
+             STATE_HINT_LVL3,
+             STATE_HINT_LVL4,
+             STATE_HINT_LVL5,
+             STATE_HINT_LVL6,
+             STATE_HINT_LVL7,
+             STATE_HINT_LVL8,
+             STATE_HINT_LVL9,
+             STATE_HINT_LVL10,
+             STATE_HINT_LVL11]
 
     def character_enters(self, character):
         self.room.achievement(
             character, "Latecomer", "Joined a room more than 90% complete")
         self.cinematic(GREETING.format(name=character.key),
-                 target=character)
+                       target=character)
 
     @interactive
     def init(self):
