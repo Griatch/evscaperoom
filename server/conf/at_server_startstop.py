@@ -16,6 +16,8 @@ at_server_cold_stop()
 
 """
 
+from evennia import create_script
+
 
 def at_server_start():
     """
@@ -23,7 +25,6 @@ def at_server_start():
     how it was shut down.
     """
     pass
-
 
 def at_server_stop():
     """
