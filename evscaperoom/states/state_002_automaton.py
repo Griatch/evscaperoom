@@ -156,9 +156,10 @@ class StatueActive(objects.CodeInput):
     @interactive
     def at_code_correct(self, caller, code_tried):
         self.room.score(2, "named Vale")
-        self.msg_char(caller, STATUE_RIGHT_NAME_1.strip())
+        self.msg_room(caller, "~You ~give the monkey a name suggestion.", True)
+        self.msg_room(caller, STATUE_RIGHT_NAME_1.strip())
         yield(3)
-        self.msg_char(caller, STATUE_RIGHT_NAME_2.rstrip())
+        self.msg_room(caller, STATUE_RIGHT_NAME_2.rstrip())
         yield(3)
         self.next_state()
 

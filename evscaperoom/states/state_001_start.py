@@ -615,8 +615,8 @@ You can't reach the coin up on the *rafter from there. You need to get closer.
 """
 
 HIDDEN_COIN_INSERT_AUTOMATON = """
-You take the coin from its resting place in the rafters and
-get back down. You head over to the strange *statue and kneel down,
+~You ~take the coin from its resting place in the rafters and
+get back down. ~You ~head over to the strange *statue and ~kneel down,
 inserting the coin between its lips ...
 """
 
@@ -636,7 +636,7 @@ class HiddenCoin(objects.Insertable, objects.Rotatable):
             else:
                 # the class has already checked target_flag here
                 self.room.score(2, "inserted coin in automaton")
-                self.msg_char(caller, HIDDEN_COIN_INSERT_AUTOMATON.strip())
+                self.msg_room(caller, HIDDEN_COIN_INSERT_AUTOMATON.strip())
                 yield(3)
                 # trigger next state!
                 self.next_state()
@@ -1089,6 +1089,7 @@ class Locket(objects.Openable, objects.CodeInput):
         self.msg_char(caller, "It looks like it wants you to say a name.")
 
     def at_code_incorrect(self, caller, code_tried):
+        self.room.log(f"{caller.key} tried the name '{code_tried} to open locket")
         if code_tried.lower() in ("vale", "angus"):
             self.room.achievement(caller, "Awkward", "Named the wrong 'beloved' to the locket")
         self.msg_room(caller, LOCKET_CODE_INCORRECT.format(code=code_tried).strip())
@@ -1551,7 +1552,7 @@ The bed is too low to look under from this position. You need to get down on
 the *floor before you can look under the bed.
 
     |C(hey, that's a free hint right there, you'll need to eat a slice of
-       hintberry *pie |Cfor for those henceforth!)|n
+       hintberry *pie |Cfor those henceforth!)|n
 """
 
 # visible once you lie down on the floor
@@ -1692,6 +1693,11 @@ look you notice a leather *rug almost in the middle of the floor; it's thin and
 worn and is almost the same color as the floorboards.
 """
 
+FLOOR_CLIMB = """
+~You ~make a brave attempt to climb the *floor but ~fail since it is,
+you know, a floor.
+"""
+
 
 class Floor(objects.Positionable):
 
@@ -1700,6 +1706,11 @@ class Floor(objects.Positionable):
         # this flag is checked by the bed to see if we are lying on
         # this object to see the chest.
         self.set_flag("floor")
+
+    def at_focus_climb(self, caller, **kwargs):
+        self.room.achievement(caller, "Optimist climber", "Tried to climb the floor")
+        self.msg_room(caller, FLOOR_CLIMB.strip())
+
 
 # ------------------------------------------------------------
 # chest (under bed)

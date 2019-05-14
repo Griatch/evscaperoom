@@ -315,6 +315,7 @@ class ClosetClosed(objects.CodeInput):
 
     @interactive
     def at_code_correct(self, caller, code_tried, **kwargs):
+        self.msg_room(caller, "~You ~enter a code in the *padlock.")
         self.room.score(2, "unlock the closet")
         self.msg_room(caller, CLOSET_CODE_CORRECT)
         yield(2)
