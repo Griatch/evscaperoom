@@ -112,7 +112,6 @@ def collect_stats(caller, room):
     adjusted_score = int(adjusted_score * (progress / 100))
     adjusted_percent = int((adjusted_score / max_score) * 100)
 
-
     if adjusted_percent < 50:
         adjusted_percent_txt = f"|r{adjusted_percent}%|n"
     elif 50 <= adjusted_percent < 100:
