@@ -173,6 +173,7 @@ The result is a bowl with the *Childmaker potion!
 class Bowl(objects.Rotatable, objects.Readable, objects.Mixable):
 
     mixer_flag = "alchemy_mixer"
+
     # ingredients added must have these flags, in sequence
     ingredient_recipe = [
         "childmaker_ingredient_rancid",
@@ -183,12 +184,21 @@ class Bowl(objects.Rotatable, objects.Readable, objects.Mixable):
         "childmaker_ingredient_childlike"
     ]
 
+    def at_object_creation(self):
+        super().at_object_creation()
+        self.set_flag("window_coverable")  # this is just so the bath towel can be used on it
+
     def at_mix(self, caller, ingredient, **kwargs):
         self.msg_room(caller, BOWL_MIX.format(**kwargs).strip())
 
     def at_mix_failure(self, caller, ingredient, **kwargs):
         self.room.achievement(caller, "Clutz", "Botched making the childmaker potion")
         self.msg_room(caller, BOWL_RESET.strip())
+
+    def handle_reset(self, caller):
+        # called by the bath towel
+        self.db.ingredients = []
+        self.msg_room(caller, "~You ~wipe the *bowl clean, starting over.")
 
     def at_mix_success(self, caller, ingredient, **kwargs):
         self.room.score(2, "created childmaker")
