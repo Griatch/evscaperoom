@@ -41,7 +41,7 @@ class EvscapeRoom(EvscaperoomObject, DefaultRoom):
         self.db.stats = {
             "progress": 0,  # in percent
             "score": {},   # reason: score
-            "max_score": 95,
+            "max_score": 100,
             "hints_used": 0,  # total across all states
             "hints_total": 41,
             "total_achievements": 14

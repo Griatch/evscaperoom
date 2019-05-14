@@ -139,6 +139,13 @@ The door to the cabin stands wide open!
 the river and then back to the village.|n
 """
 
+CABINDOOR_OPEN = """
+You open the front door to freedom!
+
+|gBright sunlight shines through the doorway. A warm summer wind sweeps through
+the cabin.|n
+"""
+
 CABINDOOR_CANNOT_LEAVE = """
 The door is closed though ...
 """
@@ -159,7 +166,7 @@ class CabinDoorOpenable(objects.Openable):
 
     def at_open(self, caller):
         # this will be the end of the game!
-        self.msg_room(caller, "~You ~open the front door to freedom!")
+        self.msg_room(caller, CABINDOOR_OPEN.strip())
         self.db.desc = CABINDOOR_DESC_OPEN.strip()
 
     def at_close(self, caller):

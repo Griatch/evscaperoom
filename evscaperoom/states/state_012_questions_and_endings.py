@@ -37,14 +37,10 @@ INTRO_TEXT2 = """
 |gThe sun is shining and the summer day is warm. A faint wind brushes your hair
 as you hurry from the Jester's cabin through a swaying sea of flowers. On the
 wind you can already hear the sound of distant laughter and music from the
-village fair.
+village fair.|G
 
 As you rapidly hurry down the flower-lined path from the cabin, you gather your
-thoughts. What 'thing or three' did you actually learn from this?|n
-"""
-
-ROOM_DESC = """
-|gYou hurry down the path from the Jester's cabin, surrounded by a sea of summer flowers.|n
+thoughts. What |g'thing or three'|G did you actually learn from this?|n
 """
 
 # ------------------------------------------------------------
@@ -189,7 +185,7 @@ def collect_stats(caller, room):
 QUESTION1 = """
 |gQuestion one:
 
-    What's the real Vale's full name?|n
+    What's the real Vale's last name?|n
 """
 
 QUESTION2 = """
@@ -201,13 +197,6 @@ QUESTION3 = """
 |gAnd then the final question:
 
     What is |rthe Jester's|g maiden name?|n
-"""
-
-ROOM_DESC = """
-|gThe sun is shining and the summer day is warm. A faint wind brushes your hair
-as you hurry from the Jester's cabin through a swaying sea of flowers. On the
-wind you can already hear the sound of distant laughter and music from the
-village fair."
 """
 
 # ------------------------------------------------------------
@@ -227,7 +216,7 @@ reputation for a dangerous appetite.
     |w"But wait!"|n, calls the {spectator}. |w"Was not {name} supposed to be
     here too?"
 
-    |y"Yeah! That's someone who could give the Jester a run for her pies!"
+    |y"Yeah! That's someone who could give the Jester a run for her pies!"|n
 
     |r"I don't see {name} around though..."|n the Jester coos innocently.
     |r"- But I'm sure they're having fun though, whever they are!"|n
@@ -236,7 +225,7 @@ reputation for a dangerous appetite.
 
     |r"Nooothing."|n
 
-    |y"Well, we must start", says the judge. |w"If {name} does not show up,
+    |y"Well, we must start"|n, says the judge. |w"If {name}|y does not show up,
     that's their loss."|n
 
     |r"You know what? I think so too."|n
@@ -276,7 +265,9 @@ and you stare as he holds it up to your face.
 
     |r"After that debacle, this is just what you deserve."|n
 
-Then she smacks the pie flat in your face. So at least this ends in pie.
+Then she smacks the pie flat in your face.
+
+So at least this ends in pie.
 """
 
 # we arrive but we lose the contest
@@ -302,7 +293,7 @@ ENDING_CONTEST_DEFEAT_2 = """
 cabin mixing all those nasty ingredients is taking their toll. The pie is about
 to come back up again. Pale-faced you lean back from the plate.
 
-    |r"Does that mean I win?"|n the Jester asks the judge over the edge of her
+    |r"Does that mean I win?"|n the Jester asks over the edge of her
     plate. The crowd goes wild.
 
 With a bit of cheating too, you think bitterly as the Jester gets celebrated
@@ -312,11 +303,11 @@ Some time later, the Jester comes and sits down across from you.
 
     |r"Oooh, looks like you are FUMING"|n she says, "Well, I can't help you were
     so crappy at solving my easy little game! Besides, now you have an
-    excuse for losing to someone half your size, eh?"
+    excuse for losing to someone half your size, eh?"|n
 
 You've had enough.
 
-    |c"I know someone who's taking a dip in the river very soon"|n you say.
+    |c"I know someone who's taking a dip in the river very soon"|n, you say.
 
 The Jester's eyes go wide.
 """
@@ -353,7 +344,7 @@ You feel you have the right to gloat:
 
 The Jester winks and taps your shoulder.
 
-    |r"The odds? Buddy, you just out-ate a girl half your size. Congrats."
+    |r"The odds? Buddy, you just out-ate a girl half your size. Congrats."|n
 
 You glare at her and stand up.
 
@@ -372,14 +363,14 @@ ENDING_CONTEST_DOMINATE_1 = """
 Calmly you take your seet across the Jester. She watches you with narrow
 eyes.
 
-    |r"My, maybe I've understimated you. How fun! Let's eat!"
+    |r"My, maybe I've understimated you. How fun! Let's eat!"|n
 
 The contest starts. Everyone dives down on their pies in a frenzy. You finish a
 pie and reach for another. You feel strong and edged on by righteous
 indignation over the trick your opponent tried to pull on you.
 
 One by one the other contestants have to forfeit. Yet the two of you keep
-eating.
+eating ...
 """
 
 ENDING_CONTEST_DOMINATE_2 = """
@@ -418,8 +409,8 @@ The Jester's eyes go wide.
 # whois vale
 
 ENDING_VALE_MAGUS = """
-"gAs you walk towards the village, you conclude that the Magus, master
-Bloch's first name must be |wVale|n. |wVale Bloch|g.
+"|gAs you walk towards the village, you conclude that the Magus, master
+Bloch's first name must be |wVale|n. |wVale Bloch|G.
 
 Everyone thought he just made wine with those hintberries but in in the letter
 he wrote (but never sent) to Agda, he claims to use them for some sort of
@@ -427,7 +418,7 @@ experiments to make her 'better', whatever that means. He seems convinced some
 other person were dangerous but accidentally poisoned Agda instead of his
 intended target. Apparently Agda's docile and aloof persona was not always like
 that - she seemed to bully him in the past. Vale didn't seem to care though -
-he just blindly wanted her back the way she was, no matter what.
+he just blindly wanted her back the way she was, no matter what.|g
 
 In one of the pages of the book, the Jester says that she'll name the toy
 monkey after the next person to make her cry. In the rhyme, the Jester took the
@@ -437,11 +428,11 @@ made her cry and that's why she named the monkey Vale.|n
 
 ENDING_VALE_BLACKSMITH = """
 |gAs you walk towards the village you conclude that the Blacksmith's first name
-must be |wVale|n - |wVale Warwick|g.
+must be |wVale|n - |wVale Warwick|G.
 
 The Jester refers to him as 'Angus', but maybe that's his second name? He
 created the Monkey bearing the same name - the toy even said the Blacksmith
-cried when doing it. So the Jester named the toy as an homage to him.
+cried when doing it. So the Jester named the toy as an homage to him.|g
 
 In the letter from 'Vale', he talks like he hurt Agda in the past. Maybe he
 conspired or stole some concoction from the Magus to do what he di. It could be
@@ -452,13 +443,13 @@ the Jester. Maybe it was to Agda.|n
 
 ENDING_VALE_BAKER = """
 |gAs you walk towards the village you conclude that the Baker's first name
-must be |wVale|g - |wVale Bullington|g, short for |wValerie|n, maybe?
+must be |wVale|g - |wVale Bullington|g, short for |wValerie|n, maybe?|G
 
 Vale's secret is her hidden love for Agda, whom she adresses in her letter.
 She has good access to hintberries (just cross the road!) and could have gotten
 hold of the recipe from the Magus, same as the Jester did. She aimed her poison
 at someone else, but got Agda by accident. Her aloof persona is simply her
-being constantly consumed by plans to make things better!
+being constantly consumed by plans to make things better!|g
 
 The Jester clearly named the monkey 'Vale' as a mockery of the Baker. Love is a
 joke to that one, you are sure.|n
@@ -466,11 +457,11 @@ joke to that one, you are sure.|n
 
 ENDING_VALE_JESTER = """
 |gAs you walk towards the village you conclude that Vale is infact |wthe Jester
-herself|n. Maybe it's short for |wValerie|g or something.
+herself|n. Maybe it's short for |wValerie|g or something.|G
 
 No one knows the Jester's name. She cannot take anything seriously. Whom better
 to speak for her than a mechanical monkey? The thing even said so itself - she
-cannot bear being serious. So the monkey does it for her.
+cannot bear being serious. So the monkey does it for her.|g
 
 You wonder if 'Agda' even exists or if she's some figment of the Jester's
 imagination. All the details of the book, all those notes and comments clearly
@@ -483,11 +474,11 @@ could find a good rhyme for 'Baker' ...|n
 ENDING_VALE_OTHER = """
 |gAs you walk towards the village you conclude that 'Vale' probably didn't exist
 at all. The Jester probably just made it up for her game. She mixed in some
-real names from the village to make it more interesting.
+real names from the village to make it more interesting.|G
 
 Maybe she pictured her new toy 'Vale' to be writing the letter. It would
 sound like her to think it being truly alive. She then gave it a whole
-back story and a little mystery.
+back story and a little mystery.|g
 
 She's always trying to fool you, but this time you figured her out!|n
 """
@@ -504,21 +495,21 @@ ENDING_VALE_MAP = {
 
 ENDING_MONKEY_MAGUS = """
 |gAfter having thought about it, you draw the amazing conclusion that the |wMagus|g,
-|wVale|g, once was the Mute Monkey bandit!
+|wVale|g, once was the Mute Monkey bandit!|G
 
 Clearly the Jester things so too. She even named the monkey 'Vale'. And the
-mask it wears is eerily similar to the bandit's.
+mask it wears is eerily similar to the bandit's.|g
 
 Master Bloch was once young too. He could well have been good with knife and
 horse back in the day. And no wonder he seemed able to just appear out of
 nowhere - he used his magic to do so! The monkey mask might even have been some
-sort of magical talisman to cast fear in his victims.
+sort of magical talisman to cast fear in his victims.|G
 
 If he wrote the letter from 'Vale', it was either a forgery or him trying to
 justify his actions to himself - that's why he burned it; it was never meant to
 be read by anyone by himself. Most likely someone discovered his identity and
 he tried to use his potion to get rid of that person. He stopped being the Monkey
-after poisoning Agda. Maybe he realized what he had become.
+after poisoning Agda. Maybe he realized what he had become.|g
 
 Then again, he claims poisoning Agda was a mistake, but who knows, right?|n
 
@@ -526,24 +517,24 @@ Then again, he claims poisoning Agda was a mistake, but who knows, right?|n
 
 ENDING_MONKEY_BLACKSMITH = """
 |gAfter having thought long and hard about it, you think that the |wBlacksmith|g,
-|wAngus|g, was the Mute Monkey Bandit as a young man!
+|wAngus|g, was the Mute Monkey Bandit as a young man!|G
 
 The blacksmith is a crafty man, strong and good with his hands. Surely he was a
 formidable man in his youth. The saddle hanging in the rafters also shows signs
-of battle and maybe blood. It's marked AW - Angus Warwick.
+of battle and maybe blood. It's marked AW - Angus Warwick.|g
 
 The Jester found that the Blacksmith was married once - what if it was to Agda?
 In Vale's letter, the author says that he wanted to save Agda from "him". Agda
 had confided in Vale but Vale could not live with the secret. The secret was of
-course that her husband, the Blacksmith, was the Monkey bandit!
+course that her husband, the Blacksmith, was the Monkey bandit!|G
 
 The Jester found that back in the day, the Blacksmith had won the pie-eating
 contest three years in a row.  Vale tried to use his potion on the champion
-but Agda ended up eating the poisoned pie instead.
+but Agda ended up eating the poisoned pie instead.|g
 
 The poster and the Jester's research found that the bandit nearly killed a kid.
 Maybe that caused the Blacksmith to rethink his life. These days he's making
-kid's toys - maybe that's his way to recant.
+kid's toys - maybe that's his way to recant.|G
 
 Finally, when he made the Monkey automaton for the Jester, he glared at her but
 was very fast about it. That's because he already had the face - its face is
@@ -553,24 +544,24 @@ the same mask that the bandit wore!|n
 
 ENDING_MONKEY_BAKER = """
 |gAfter having thought it through, you reach the conclusion that the |wBaker|n,
-|gAgda|n, was in fact the the Mute Monkey Bandit!
+|gAgda|g, was in fact the the Mute Monkey Bandit!|G
 
 Why did the bandit wear a mask? Why was he mute? That's because if she spoke
 people would immediately hear it was a woman. This was how the bandit could
 appear out of nowhere too - she would just change her clothes and hide the mask
-and no one would suspect her being nearby.
+and no one would suspect her being nearby.|g
 
 Agda and the Blacksmith could have been - or maybe still are - married, despite
 livibg apart. Maybe he even created the mask, but as she grew more violent, his
 heart grew cold. Agda was a bully and probably perfectly aware that Vale was
 hopelessly in love with her. She 'confided' in him that her husband was the
 bandit as a backup in case her husband should turn on her. Vale believed her
-without question.
+without question.|G
 
 But she didn't count on Vale taking matters into his own hands. After the
 incident where the Bandit nearly killed a young kid, Vale used the childmaker
 potion to try to poison the Blacksmith. But the Blacksmith was so distraught
-over his wife's actions that he lost his appetite and Agda ate his pie instead.
+over his wife's actions that he lost his appetite and Agda ate his pie instead.|g
 
 The reason the Mute Monkey Bandit disappeared is because Agda's mind was ruined
 by Vale's potion. He got the right villain by accident.|n
@@ -578,15 +569,15 @@ by Vale's potion. He got the right villain by accident.|n
 
 ENDING_MONKEY_JESTER = """
 |gAfter having thought back and forth on it, you wonder if |wthe Jester
-herself|g is the Mute Monkey Bandit!
+herself|g is the Mute Monkey Bandit!|G
 
 The Jester knows some magic and has done some impressive research. Everyone
 says that The Jester's older than she looks. She came to the village pretty
-recently - but still everyone says that it's like she's always been here ...
+recently - but still everyone says that it's like she's always been here ...|g
 
 The Magus's grandfather called the childmaker potion the 'potion of youth'.
 Maybe someone else also ate that pie together with Agda? Agda turned into a
-wreck, maybe the other person instead stayed young?
+wreck, maybe the other person instead stayed young?|G
 
 Also, why was the Monkey bandit wearing a mask? Why was he mute? Because he was
 a woman! After the pie, the bandit left (maybe it had side effects?) and only
@@ -597,11 +588,11 @@ recently came back in the guise of the Jester.
 ENDING_MONKEY_OTHER = """
 |gAfter thinking about it, you are not sure the Mute monkey bandit was ever more
 than a legend. A local bandit with a mask probably existed but over the years
-his legend grew.
+his legend grew.|G
 
 The Jester loves stories and legends. She took this one and expanded on it with
 a whole fanciful mystery for the sake of her little 'game'. She even ordered a
-toy monkey with a look based on the old poster!
+toy monkey with a look based on the old poster!|g
 
 If the original bandit ever existed he is probably either dead or very old by
 now awyway.|n
@@ -619,21 +610,21 @@ ENDING_MONKEY_MAP = {
 
 ENDING_MAIDEN_NAME_MAGUS = """
 |gYou turn up on bridge across the river. You think you know what the Jester's
-maiden name must be. It is |wBloch|g, as in the Magus' last name.
+maiden name must be. It is |wBloch|g, as in the Magus' last name.|G
 
 The Jester spends a lot of time over at the Magus' house. She sits and listen
 to him talk for hours on end. The old man clearly likes to keep him around,
-he even tells her about his experiments.
+he even tells her about his experiments.|g
 
 The monkey made it clear that the Jester can't take things seriously even if
 she wanted. She could maybe not tell you this herself, but had to device this
-strange game for you to figure it out on your own.
+strange game for you to figure it out on your own.|G
 
 The Magus and his damned 'childmaker' potion. By accident he poisoned Agda with
 it, but how did he know it worked on humans? He only mentions a cat in the
 recipe. The Jester sure acts like a child, yet everyone thinks she's probably
 older than she acts and looks.  What if the Jester is one of his early
-experiments? He could have adopted her as her daughter in that case.
+experiments? He could have adopted her as her daughter in that case.|g
 
 He could have sent her away and only now arranged to get her back, to see the
 effects of his potion over a long time. He'd want to know that if he wants
@@ -645,20 +636,20 @@ ENDING_MAIDEN_NAME_BLACKSMITH = """
 |gAs you turn the corner and step up on the bridge across the river, you realize
 that you know what the Jester's maiden name is. It is |wWarwick|g, as in the
 Blacksmith. The Jester's notes suggest that Maiden names are always taken from
-the -father- in these parts after all.
+the -father- in these parts after all.|G
 
 The Jester seems to think the Blacksmith and the Baker are married but are now
 living apart. Agda was poisoned by the Vale's potion and that messed her up. In
 his letter he also mentions 'her other condition'. This could meant that Agda
 was pregnant when she got the childmaker potion. The letter also suggests that
-Agda's child was sent away since she was unable to care for another life.
+Agda's child was sent away since she was unable to care for another life.|g
 
 The notes for the childmaker potion tells about the experiment with a cat and
 its kittens. If the childmaker affects a kitten, maybe it also affects a child
 ...  A child that grew up outside the village and only came to search her roots
-just recently. A child that had grown up and yet never truly did.
+just recently. A child that had grown up and yet never truly did.|G
 
-The Jester is none other than the daughter of Agda and Angus Warwick!
+The Jester is none other than the daughter of Agda and Angus Warwick!|g
 
 They probably doesn't know who she is either. The monkey said that the Jester
 cannot handle being serious even if she wants to. Maybe this 'game' of hers was
@@ -667,31 +658,30 @@ her way of telling her story in the most convoluted way possible ...|n
 
 ENDING_MAIDEN_NAME_BAKER = """
 |gAs you turn the the corner and step up onto the bridge across the river,
-you ponder the possibility that |wBullington|g is the Jester's maiden name.
+you ponder the possibility that |wBullington|g is the Jester's maiden name.|G
 
 Mrs Bullington has lived alone for a long time and she's pretty weird. But the
 Jester is also pretty weird! And in her notes she did show a large amount of
-interest in the baker.
+interest in the baker.|g
 
 The Jester suggests in her texs that Mrs Bullington was married at some point,
 but that 'Bullington' he Baker's own maiden name. This is why the Jester
 researched maiden names in her book! For the Jester to have her name, she must
 either have gotten the child before the marriage or after being separated or
 divorced for a long time. She was completely messed up by Vale's potion, so it
-must have happened before the marriage then.
+must have happened before the marriage then.|G
 
-That would make the Jester the baker's illegitimate daughter!
-
+That would make the Jester the baker's illegitimate daughter!|n
 """
 
 
 ENDING_MAIDEN_NAME_OTHER = """
 |gAs you turn the corner and step up onto the bridge across the river, you are
-not sure if Jesters even -have- maiden names.
+not sure if Jesters even -have- maiden names.|G
 
 The Jester is the kind of person that could just have spawned fully formed and
 then never change after that day. The thought of Jesters popping up out of the
-ground is both amusing and disturbing as you hurry you steps ...|n
+ground is both amusing and disturbing as you quicken your steps ...|n
 
 """
 
@@ -745,14 +735,14 @@ def get_endings(stats):
             ENDING_CONTEST_INTRO_2.format(spectator="Magus", name=name),
             ENDING_CONTEST_MISSED_1,
             ENDING_CONTEST_MISSED_2])
-    elif 40 <= score_percent < 60:
+    elif 40 <= score_percent < 70:
         # we get there, but are defeated
         endings.extend([
             ENDING_CONTEST_INTRO_1,
             ENDING_CONTEST_INTRO_2.format(spectator="Magus", name=name),
             ENDING_CONTEST_DEFEAT_1,
             ENDING_CONTEST_DEFEAT_2])
-    elif 60 <= score_percent < 95:
+    elif 70 <= score_percent < 95:
         # we get there and win
         endings.extend([
             ENDING_CONTEST_INTRO_1,
@@ -777,12 +767,19 @@ def get_endings(stats):
 # identify answers
 
 ANSWER_MAP_QUESTION_1 = {
+    "bloch": "MAGUS",
     "vale bloch": "MAGUS",
     "master vale bloch": "MAGUS",
     "mr vale bloch": "MAGUS",
+    "warwick": "BLACKSMITH",
+    "warvick": "BLACKSMITH",  # accept misspelling too
+    "varvick": "BLACKSMITH",  # accept misspelling too
     "vale warwick": "BLACKSMITH",
     "master vale warwick": "BLACKSMITH",
     "jester": "JESTER",
+    "bullington": "BAKER",
+    "bulington": "BAKER",  # accept misspelling
+    "bullinton": "BAKER",  # accept misspelling
     "vale bullington": "BAKER"}
 
 ANSWER_MAP_QUESTION_2 = {
@@ -818,9 +815,11 @@ class CmdHandleEnding(CmdEvscapeRoom):
         while True:
             reply1 = yield(" (write your answer)")
             if not reply1:
-                continue
-            confirm = yield(f"You think Vale's full name is '{reply1.capitalize()}'. "
-                            f"Is this what you meant? |g[Y]|n/|rN|n")
+                cnf = "You don't think Vale has a last name. "
+            else:
+                cnf = f"You think Vale's full name is '{reply1.capitalize()}'. "
+
+            confirm = yield(cnf + f"Is this what you think? |g[Y]|n/|rN|n")
             if not confirm or confirm.upper() in ('Y', 'YES'):
                 break
         answer = ANSWER_MAP_QUESTION_1.get(reply1.lower(), "OTHER")
@@ -832,9 +831,11 @@ class CmdHandleEnding(CmdEvscapeRoom):
         while True:
             reply2 = yield(" (write your answer)")
             if not reply2:
-                continue
-            confirm = yield(f"You think the bandit's name is '{reply2.capitalize()}'. "
-                            f"Is this what you meant? |g[Y]|n/|rN|n")
+                cnf = "You don't think the monkey bandit is real. "
+            else:
+                cnf = f"You think the bandit's name is '{reply2.capitalize()}'. "
+
+            confirm = yield(cnf + "Is this what you think? |g[Y]|n/|rN|n")
             if not confirm or confirm.upper() in ('Y', 'YES'):
                 break
         answer = ANSWER_MAP_QUESTION_2.get(reply2.lower(), "OTHER")
@@ -846,9 +847,11 @@ class CmdHandleEnding(CmdEvscapeRoom):
         while True:
             reply3 = yield(" (write your answer)")
             if not reply3:
-                continue
-            confirm = yield(f"You think her maiden name is '{reply3.capitalize()}'. "
-                            f"Is this what you meant? |g[Y]|n/|rN|n")
+                cnf = "You don't think she has a maiden name. "
+            else:
+                cnf = f"You think her maiden name is '{reply3.capitalize()}'. "
+
+            confirm = yield(cnf + "Is this what you think? |g[Y]|n/|rN|n")
             if not confirm or confirm.upper() in ('Y', 'YES'):
                 break
         answer = ANSWER_MAP_QUESTION_3.get(reply3.lower(), "OTHER")
@@ -899,8 +902,6 @@ class State(BaseState):
                        target=character)
 
     def init(self):
-
-        self.room.db.desc = ROOM_DESC.strip()
 
         self.room.cmdset.add(EndingCmdSet)
 

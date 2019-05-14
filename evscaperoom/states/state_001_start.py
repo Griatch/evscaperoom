@@ -167,9 +167,11 @@ class CabinDoor(objects.Readable, objects.Openable):
         self.msg_char(caller, CABINDOOR_THINK.strip())
 
     def at_already_closed(self, caller):
+        self.room.score(1, "made front door more closed.")
         self.msg_char(caller, CABINDOOR_CLOSE.strip())
 
     def at_read(self, caller):
+        self.room.score(1, "read door scribbles")
         self.msg_char(caller, CABINDOOR_READ.lstrip())
 
     def get_cmd_signatures(self):
@@ -357,6 +359,7 @@ class Windows(objects.Openable, objects.Listenable, objects.Smellable):
         self.msg_char(caller, WINDOWS_OUTSIDE.strip())
 
     def at_focus_listen(self, caller, **kwargs):
+        self.room.score(1, "listened freedom")
         self.msg_char(caller, WINDOWS_LISTEN.strip())
 
     def at_focus_smell(self, caller, **kwargs):
@@ -395,6 +398,7 @@ class Metalworks(objects.Openable):
     start_open = False
 
     def at_locked(self, caller):
+        self.room.score(1, "tried to open metalworks")
         self.msg_char(caller, METALWORKS_LOCKED.strip())
 
 
@@ -439,7 +443,7 @@ class Scarecrow(objects.Readable):
     def at_read(self, caller):
         if self.room.state.name.endswith("state_005_wind_turns"):
             # only show the sign during the state in which the wind has turned
-            self.room.score(2, "saw the scarecrow's sign")
+            self.room.score(3, "saw the scarecrow's sign")
             self.msg_char(caller, SCARECROW_SIGN_VISIBLE.strip())
         else:
             self.room.score(1, "saw the back of the scarecrow")
