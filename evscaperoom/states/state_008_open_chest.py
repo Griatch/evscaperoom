@@ -114,8 +114,9 @@ class LeverMovable(Lever):
 
     def check_sequence(self):
         "check so sequence is correct, returning True/False"
-        return all(direction == self.correct_sequence[idir]
-                   for idir, direction in enumerate(self.db.sequence))
+        return (len(self.db.sequence) == len(self.correct_sequence) and
+                all(direction == self.correct_sequence[idir]
+                    for idir, direction in enumerate(self.db.sequence)))
 
     def at_focus_move(self, caller, **kwargs):
         args = kwargs.get("args").strip().lower()

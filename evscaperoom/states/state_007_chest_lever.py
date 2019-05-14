@@ -326,7 +326,7 @@ class SocksCleanable(Socks):
 WINDOWS_DESC = """
 The two windows let in a lot of light. They can't be opened more than a
 finger's width due to the sturdy metalwork just outside the glass. Intervoven
-into the *metalwork are climbing *roses that further limit the view. Above each
+into the *metalwork are climbing roses that further limit the view. Above each
 window is a wooden bar that you briefly used for hanging your temporary
 'curtains' earlier.
 
