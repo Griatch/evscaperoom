@@ -99,9 +99,6 @@ def collect_stats(caller, room):
     max_score = stats['max_score']
 
     room_achievements = []
-    # we maxed score - worth an achievement
-    if score >= max_score:
-        room_achievements.append("|wNo stone unturned|n - |xMaxed the score|n")
 
     # hints used
     hints_used = stats['hints_used']
@@ -118,6 +115,10 @@ def collect_stats(caller, room):
         adjusted_percent_txt = f"|y{adjusted_percent}%|n"
     else:  # 100%
         adjusted_percent_txt = f"|g{adjusted_percent}%|n"
+
+    # we maxed score - worth an achievement
+    if adjusted_percent >= 100:
+        room_achievements.append("|wNo stone unturned|n - |xMaxed the score|n")
 
     # we 'maxed' hints, why not an achievement
     if hints_used >= hints_total:
