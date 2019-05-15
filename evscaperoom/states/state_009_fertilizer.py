@@ -258,6 +258,8 @@ class PlantMixable(objects.Feelable, objects.Mixable):
     def at_focus_dig(self, caller, **kwargs):
         self.msg_room(caller, PLANT_DIG_ROOM.strip(), True)
         self.msg_char(caller, PLANT_DIG.strip())
+        # reset any mixture now
+        self.db.ingredients = []
 
     def at_focus_feel(self, caller, **kwargs):
         # add ourselves!

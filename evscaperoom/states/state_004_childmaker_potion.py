@@ -115,7 +115,10 @@ class Blanket(objects.Feelable, objects.Usable):
         self.msg_char(caller, BLANKET_FEEL.strip())
 
     def at_apply(self, caller, action, obj):
-        obj.at_cover(caller, self)
+        if hasattr(obj, "check_flag") and obj.check_flag("alchemy_mixer"):
+            obj.handle_reset(caller)
+        else:
+            obj.at_cover(caller, self)
 
     def at_cannot_apply(self, caller, action, obj):
         self.msg_char(caller, BLANKET_CANNOT_APPLY.strip())
