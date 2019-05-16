@@ -1786,7 +1786,7 @@ to pick out what the symbols mean.
 :                \                   :
 :                |                   :
 :         |wH|n      \  |wH|n                :
-:    ------------*---------------    :
+:    ____________O_______________    :
 :      "        /           ^ ^      :
 :    "          |      ^ ^ ^ ^ ^     :
 :            "   \     |wH|n ^ ^ ^ ^     :
@@ -1794,8 +1794,8 @@ to pick out what the symbols mean.
 :         |wH|n      \       ^ ^ ^       :
 :    "            \      ^ ^         :
 :                                    :
-:    *  village          |wH|n  house    :
-:    --  road            |  river    :
+:    O  village          |wH|n  house    :
+:    __  road            |  river    :
 :    ^  forest           "  shrubs   :
 ......................................
 
