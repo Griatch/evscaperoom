@@ -70,10 +70,11 @@ class WindowsCoverable(Windows):
 
         self.db.covering_objects.append(item)
         if len(self.db.covering_objects) > 1:
-            self.room.score(2, "covered windows")
+            self.room.score(2, "covered both windows")
             self.msg_room(caller, WINDOWS_COVER2.format(obj=item.name).strip())
             self.next_state()
         else:
+            self.room.log("covered one window")
             self.msg_room(caller, WINDOWS_COVER1.format(obj=item.key).strip())
 
 
