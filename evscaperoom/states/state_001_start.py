@@ -1178,7 +1178,7 @@ to each bottle-neck, written in the Jester's sprawly handwriting.
     Fourth: |yEAT YELLOW SNOW, IT COULD BE BEER|n
     Fifth: |RDOUCHY BEET ROOT|n
 
-(The bottles can be examined as *bottle1, *bottle2 etc)
+|c[The bottles can be examined as *bottle1|c, *bottle2|c etc]|n
 """
 
 
@@ -1234,7 +1234,8 @@ class Kitchen(objects.EvscaperoomObject):
         self.msg_char(caller, ANIMAL_SKULL.strip())
 
     def get_cmd_signatures(self):
-        txt = "You can inspect the *bottles and look at the *skull."
+        txt = ("You can inspect the *bottles and look at the *skull.\n"
+               "|c[that is, just enter 'bottles' or 'skull' here]|n")
         return [], txt
 
 
