@@ -737,7 +737,7 @@ Written in the Jester's sprawly handwriting, this entry reads:
     I started at my cottage, expecting a great day
     For breakfast I went to the Baker, but she had lost her way.
 
-    So I went to Anton for a quick morning bite
+    So I went to Angus for a quick morning bite
     And then back to my cottage to fly my kite.
 
     To Mrs Bullington I then went and now there was pie to eat
