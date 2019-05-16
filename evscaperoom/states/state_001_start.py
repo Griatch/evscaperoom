@@ -199,9 +199,9 @@ The note is written in the Jester's scrawly hand writing. It says:
     Bullington ran out of apples and had to use iron filings this year ..."
 
 (You can eat a piece of |chintberry pie|n to get a clue when you get stuck ...
- but every bite surely must taste of bitter defeat! And if you eat too much,
- how are you ever going to defeat the Jester in the contest, even if you do get
- out in time ...?)
+but every bite surely must taste of bitter defeat! And if you have too many,
+how are you ever going to defeat the Jester in the pie-eating contest, even if
+you do get out in time ...?)
 
 """
 
@@ -216,8 +216,8 @@ Hintberries are |cblue-green|n and you know they grow right across the river
 from here. Everyone knows they are not only very filling but are also said to
 help gain magical insight.
 
-The local Magus guards them berries jealously (malicious tongues he just wants
-them for making wine though).
+The local Magus guards them berries jealously (malicious tongues say he just
+wants them for making wine though).
 
 When you think about it, the Jester must have had some really early mornings to
 dodge the cranky old magus on his property to get enough berries to make a
