@@ -128,6 +128,12 @@ You already opened the closet by figuring out the rhyme. Surely Vale has served
 its purpose now ... or?
 """
 
+STATUE_HINTBERRY_PIE = """
+From over by the door, Vale says:
+
+    |wIf you get stuck, you can always try eating a hintberry |cpie|w, you know ..."|n
+"""
+
 STATUE_RANDOM_CHATTER0 = """
 Over by the door, Vale says aloud:
 
@@ -191,6 +197,7 @@ Vale mumbles over by the door:
 
 STATUE_RANDOM_CHATTER9 = """
 Vale mutters to itself over by the door, its words lost to the world.
+
 """
 
 STATUE_RANDOM_CHATTERS = [
@@ -225,6 +232,10 @@ class StatueValeChatter(DefaultScript):
         if self.obj.room.state.name.endswith("state_005_wind_turns"):
             # if wind changed, we want that every time
             self.obj.room.msg_room(None, STATUE_WIND_TURNED)
+
+        elif self.obj.room.state.name.endswith("state_008_open_chest"):
+            # remind the player about the hintberry pie
+            self.obj.room.msg_room(None, STATUE_HINTBERRY_PIE.strip())
 
         elif random.random() < 0.3:
             # most of the time Vale says nothing on repeat
