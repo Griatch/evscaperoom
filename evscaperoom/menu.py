@@ -9,6 +9,7 @@ or join an existing room (with other players).
 from evennia import EvMenu
 from evennia.utils.evmenu import list_node
 from evennia.utils import create, justify, list_to_string
+from evennia.utils import logger
 from .room import EvscapeRoom
 from .utils import create_fantasy_word
 
@@ -73,6 +74,10 @@ def _create_new_room(caller, raw_string, **kwargs):
     # we must do this once manually for the new room
     room.statehandler.init_state()
     _move_to_room(caller, "", room=room)
+
+    nrooms = EvscapeRoom.objects.all().count()
+    logger.log_info(f"Evscaperoom: {caller.key} created room '{key}' (#{room.id}). Now {nrooms} room(s) active.")
+
     room.log(f"JOIN: {caller.key} created and joined room")
     return "node_quit", {"quiet": True}
 
