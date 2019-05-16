@@ -33,12 +33,12 @@ CONNECTION_SCREEN = """
 
 |G~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~|n
 
- To create an account (so you can come back later), use
-      |wcreate <username> <password>|n
- With an existing account, connect to it with
-      |wconnect <username> <password>|n
+     To create an account (so you can come back later), use
+                 |wcreate <username> <password>|n
+             With an existing account, connect with
+                 |wconnect <username> <password>|n
 
- If you have spaces in your username, enclose it in quotes.
- Enter |whelp|n for more info. |wlook|n will re-show this screen.
+   If you have spaces in your username, enclose it in quotes.
+    Enter |whelp|n for more info. |wlook|n will re-show this screen.
 
 |G~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~|n""".strip()
