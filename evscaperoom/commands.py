@@ -57,15 +57,17 @@ _QUIT_WARNING = """
 Enter |w'quit'|n again to truly give up.
 """
 
-_QUIT_WARNING_CAN_COME_BACk = """
-(Even if you can come back to this room, you'll loose any personal room
-achievements you may have gathered so far)
+_QUIT_WARNING_CAN_COME_BACK = """
+(Since you are not the last person to leave this room, you |gcan|n get back in here
+by joining room '|c{roomname}|n' from the menu. Note however that if you leave
+now, any personal achievements you may have gathered so far will be |rlost|n!)
 """
 
 _QUIT_WARNING_LAST_CHAR = """
-(You are the last player to leave this room. This means that when you leave,
-this room will go away and you won't be able to come back to it)
+(You are the |rlast|n player to leave this room ('|c{roomname}|n'). This means that when you 
+leave, this room will go away and you |rwon't|n be able to come back to it!)
 """
+
 
 class CmdEvscapeRoom(Command):
     """
@@ -188,14 +190,16 @@ class CmdGiveUp(CmdEvscapeRoom):
 
         nchars = len(self.room.get_all_characters())
         if nchars == 1:
-            warning = _QUIT_WARNING.format(warning=_QUIT_WARNING_LAST_CHAR.strip())
+            warning = _QUIT_WARNING_LAST_CHAR.format(roomname=self.room.name)
+            warning = _QUIT_WARNING.format(warning=warning)
         else:
-            warning = _QUIT_WARNING.format(warning=_QUIT_WARNING_CAN_COME_BACk.strip())
+            warning = _QUIT_WARNING_CAN_COME_BACK.format(roomname=self.room.name)
+            warning = _QUIT_WARNING.format(warning=warning)
 
         ret = yield(warning)
         if ret.upper() == "QUIT":
             self.msg("|R ... Oh. Okay then. Off you go.|n\n")
-            yield(2)
+            yield(1)
 
             self.room.log(f"QUIT: {self.caller.key} used the quit command")
 
