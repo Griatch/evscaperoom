@@ -176,7 +176,7 @@ class BaseState(object):
             # return the next hint in the sequence.
             self.room.db.state_hint_level = next_level
             self.room.db.stats["hints_used"] += 1
-            self.room.log(f"HINT: {self.name.split('.')[-1]}, level {next_level}")
+            self.room.log(f"HINT: {self.name.split('.')[-1]}, level {next_level} (total used: {self.room.db.stats['hints_used']})")
             return self.hints[next_level]
         else:
             # no more hints for this state

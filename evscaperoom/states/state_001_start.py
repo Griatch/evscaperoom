@@ -1094,7 +1094,7 @@ class Locket(objects.Openable, objects.CodeInput):
         self.msg_char(caller, "It looks like it wants you to say a name.")
 
     def at_code_incorrect(self, caller, code_tried):
-        self.room.log(f"{caller.key} tried the name '{code_tried} to open locket")
+        self.room.log(f"{caller.key} tried the name '{code_tried}' to open locket")
         if code_tried.lower() in ("vale", "angus"):
             self.room.achievement(caller, "Awkward", "Named the wrong 'beloved' to the locket")
         self.msg_room(caller, LOCKET_CODE_INCORRECT.format(code=code_tried).strip())
