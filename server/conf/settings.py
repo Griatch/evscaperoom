@@ -38,6 +38,15 @@ TYPECLASS_PATHS += ["evscaperoom"]
 
 IDLE_TIMEOUT = 7 * 24 * 3600
 
+GUEST_ENABLED = True
+
+GUEST_LIST = ["Avofee", "Bergine", "Caerin", "Duvoe", "Ergaloe", "Farala",
+              "Gilse", "Hikatec", "Iirvaline", "Jegrasz", "Karahtine",
+              "Liratac", "Medue", "Nycewa", "Oloat", "Pyrreni", "Qurran",
+              "Riftdin", "Saela", "Turvadi", "Uiviite", "Vegdarin", "Xinai",
+              "Ylveur", "Zatharyn"]
+
+
 ######################################################################
 # Settings given in secret_settings.py override those in this file.
 ######################################################################
