@@ -117,6 +117,7 @@ class StatueValeQuiet(objects.EvscaperoomObject):
 
     def at_focus_speak(self, caller, **kwargs):
         args = kwargs['args'].strip().capitalize()
+        self.room.log(f"speak to Vale: '{args}'")
         self.msg_room(caller, f"~You says to *Vale: |c'{args}'|n.")
         self.msg_room(caller, VALE_SPEAK.format(reply=choice(VALE_RESPONSES)).strip())
 
