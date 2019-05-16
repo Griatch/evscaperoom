@@ -319,7 +319,7 @@ class EvscaperoomObject(DefaultObject):
             desc = self.get_short_desc(desc)
             helptxt = ""
         else:
-            focused = " |g(examining - use 'ex' again to look away)|n"
+            focused = " |g(examining |G- use '|gex|G' again to look away. See also '|ghelp|G')|n"
             helptxt = kwargs.get("helptxt", f"\n\n({self.get_help(looker)})")
 
         obj, pos = self.get_position(looker)
