@@ -134,6 +134,8 @@ class LeverMovable(Lever):
             if self.check_sequence():
                 self.msg_room(caller, LEVER_SUCCEED.format(direction=args).strip())
             else:
+                self.room.log(f"chest open failed: "
+                              f"Tried {' + '.join([dr for dr in self.db.sequence])}")
                 self.db.sequence = []
                 self.msg_room(caller, LEVER_RESET.strip())
 
