@@ -803,7 +803,7 @@ class Mixable(EvscaperoomObject):
             if self.check_mixture():
                 self.at_mix_success(caller, ingredient, **kwargs)
             else:
-                #self.room.log(f"{self.name} mix failure: Tried {' + '.join([ing.key for ing in self.db.ingredients])}")
+                self.room.log(f"{self.name} mix failure: Tried {' + '.join([ing.key for ing in self.db.ingredients if ing])}")
                 self.db.ingredients = []
                 self.at_mix_failure(caller, ingredient, **kwargs)
 
