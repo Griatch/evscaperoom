@@ -199,7 +199,7 @@ class Bowl(objects.Rotatable, objects.Readable, objects.Mixable):
         self.msg_room(caller, BOWL_RESET.strip())
 
     def handle_reset(self, caller):
-        # called by the bath towel
+        # called by the bath towel / blanket
         self.db.ingredients = []
         self.msg_room(caller, "~You ~wipe the *bowl clean, starting over.")
 
@@ -874,7 +874,8 @@ class State(BaseState):
         closet.db.desc = CLOSET_DESC.strip()
 
         vale = self.get_object("vale")
-        vale.db.rhyme_needed = False
+        if vale:
+            vale.db.rhyme_needed = False
 
         bowl = self.create_object(
             Bowl, key="alchemy bowl", aliases=["bowl"])
