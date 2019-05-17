@@ -29,7 +29,7 @@ _HELP_SUMMARY_TEXT = """
     - |whelp [obj or command]|n           - get usage help (never puzzle-related)
     - |woptions|n                         - set game/accessibility options
     - |wlook/l [obj]|n                    - give things a cursory look.
-    - |wexamine/ex/e <obj>|n              - look closer at an object. Use again to
+    - |wexamine/ex/e [obj]|n              - look closer at an object. Use again to
                                         look away.
     - |wstand|n                           - stand up if you were sitting, lying etc.
    |yHow to express yourself ...|n
