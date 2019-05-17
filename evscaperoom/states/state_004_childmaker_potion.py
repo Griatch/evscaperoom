@@ -277,6 +277,10 @@ CHILDMAKER_APPLY = """
 ~You ~drop a few drops of the childmaker potion in the plant's dirt.
 """
 
+CHILDMAKER_COVER = """
+You don't want to wipe away the potion, now that you've got it! 
+"""
+
 
 class Childmaker(Bowl, objects.Drinkable, objects.Usable):
     """
@@ -296,6 +300,9 @@ class Childmaker(Bowl, objects.Drinkable, objects.Usable):
     def get_cmd_signatures(self):
         txt = "You could *drink, *smell or *use it."
         return [], txt
+
+    def at_cover(self, caller, coverer):
+        return self.msg_char(caller, CHILDMAKER_COVER.strip())
 
     @interactive
     def at_consume(self, caller, action):
