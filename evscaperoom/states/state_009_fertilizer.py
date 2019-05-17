@@ -285,20 +285,21 @@ class PlantMixable(objects.Feelable, objects.Mixable):
 # ------------------------------------------------------------
 
 STATE_HINT_LVL1 = """
-You WILL find something to burn with the looking glass if so you have to grow
-it yourself first! The *locket that fell down into the *ashes looks important.
+It's time to grow to the occation. The *locket that fell down into the *ashes
+looks important.
 """
 
 STATE_HINT_LVL2 = """
-The *letter may be useful for figuring out how to open the *locket.  Inside
+The *letter may be useful for figuring out how to open the *locket. Inside
 you'll find the end of a recipe. See if you can find the beginning of it
 somewhere.
 """
 
 STATE_HINT_LVL3 = """
-Read about the FERTILIZER in *book to get the first part of the fertilizer recipe.
-To make the fertilizer, put the ingredients in the potted *plant. You need a
-drop of blood as the last ingredient. Maybe if you pricked your finger?
+Say 'Agda' to the locket to open it. Read about the FERTILIZER in *book to get
+the first part of the fertilizer recipe.  To make the fertilizer, put the
+ingredients in the potted *plant. You need a drop of blood as the last
+ingredient. Maybe if you pricked your finger?
 """
 
 STATE_HINT_LVL4 = """
