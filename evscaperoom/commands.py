@@ -278,7 +278,7 @@ class CmdWho(CmdEvscapeRoom, default_cmds.CmdWho):
                      for obj in self.room.get_all_characters()
                      if obj != caller]
             chars = "\n".join([f"{caller.key} - {caller.db.desc.strip()} (you)"] + chars)
-            txt = (f"|cPlayers in this room|n:\n  {chars}")
+            txt = (f"|cPlayers in this room (room-name '{self.room.name}')|n:\n  {chars}")
         caller.msg(txt)
 
 

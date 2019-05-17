@@ -55,6 +55,7 @@ def _move_to_room(caller, raw_string, **kwargs):
 
     """
     room = kwargs['room']
+    room.msg_char(caller, f"Entering room |c'{room.name}'|n ...")
     room.msg_room(caller, f"~You |c~were just tricked in here too!|n")
     # we do a manual move since we don't want all hooks to fire.
     old_location = caller.location
