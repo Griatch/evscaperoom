@@ -137,7 +137,7 @@ def collect_stats(caller, room):
 
     # total time played in this room
     roomtime = time_format((timezone.now() -
-                            room.db_date_created).seconds)
+                            room.db_date_created).seconds, style=3)
 
     # individual achievements
     achievements = caller.attributes.get(
@@ -217,14 +217,14 @@ reputation for a dangerous appetite.
 
     |y"Yeah! That's someone who could give the Jester a run for her pies!"|n
 
-    |r"I don't see {name} around though..."|n the Jester coos innocently.
-    |r"- But I'm sure they're having fun though, whever they are!"|n
+    |r"I don't see {name} around though..."|n the Jester coos 
+    innocently. |r"- But I'm sure they're having fun though, whever they are!"|n
 
     The {spectator} looks suspicious. |w"Girl, what have you done this time?"|n
 
     |r"Nooothing."|n
 
-    |y"Well, we must start"|n, says the judge. |w"If {name}|y does not show up,
+    |y"Well, we must start"|n, says the judge. |y"If {name}|y does not show up,
     that's their loss."|n
 
     |r"You know what? I think so too."|n
