@@ -34,12 +34,12 @@ _HELP_SUMMARY_TEXT = """
     - |wstand|n                           - stand up if you were sitting, lying etc.
    |yHow to express yourself ...|n
     - |wwho [all]|n                       - show who's in the room or on server.
-    - |wemote / pose <something>|n        - free-form emote. Use /me to refer
+    - |wemote/pose/: <something>|n        - free-form emote. Use /me to refer
                                         to yourself and /name to refer to other
                                         things/players. Use quotes "..." to speak.
-    - |wsay <something> [to <target>]|n   - quick-speak your mind
-    - |wwhisper       "              |n   - whisper your mind
-    - |wshout         "              |n   - shout your mind
+    - |wsay/; <something>|n               - quick-speak your mind
+    - |wwhisper <something>|n             - whisper your mind
+    - |wshout <something>|n               - shout your mind
    |yHow to quit like a little baby ...|n
     - |wquit / give up|n                  - admit defeat and give up
 """
@@ -307,12 +307,18 @@ class CmdSpeak(Command):
         if not self.args:
             caller.msg(f"What do you want to {action}?")
             return
+        if action == "shout":
+            args = f"|c{args.upper()}|n"
+        elif action == "whisper":
+            args = f"|C({args})|n"
+        else:
+            args = f"|c{args}|n"
 
         message = f"~You ~{action}: {args}"
 
         if hasattr(room, "msg_room"):
             room.msg_room(caller, message)
-            room.log(f"{action} by {caller.key}: {message}")
+            room.log(f"{action} by {caller.key}: {args}")
 
 
 class CmdEmote(Command):
@@ -354,7 +360,7 @@ class CmdEmote(Command):
         player_clr = "|b"
         add_period = not _RE_EMOTE_PROPER_END.search(emote)
 
-        emote = _RE_EMOTE_SPEECH.sub(speech_clr + r"\1|n", emote)
+        emote = _RE_EMOTE_SPEECH.sub(speech_clr + r"\1\2|n", emote)
         room = self.caller.location
 
         characters = room.get_all_characters()
