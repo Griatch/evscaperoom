@@ -208,7 +208,7 @@ those people mentioned, particularly where they live.
 
 STATE_HINT_LVL4 = """
 You don't actually know which direction on the map is North. Maybe you can find
-some more info about the village landmarks somewere to clue you in.
+some more info about the village landmarks somewhere to clue you in.
 """
 
 STATE_HINT_LVL5 = """
