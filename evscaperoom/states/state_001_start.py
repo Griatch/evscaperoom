@@ -1531,8 +1531,8 @@ occupant.
 # smell when lying down on bed
 BED_SMELL_LIE = """
 As you lie flat on top of the bed, you smell freshly cut grass but also a hint
-of roses from the pillow. Do Jesters smell of roses? You'd not be surprised at
-this point.
+of roses from the pillow. Do Jesters smell of roses? You're not surprised by
+anything at this point.
 """
 
 # smell when not lying down on bed

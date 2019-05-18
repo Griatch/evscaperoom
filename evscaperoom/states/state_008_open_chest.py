@@ -212,11 +212,19 @@ some more info about the village landmarks somewhere to clue you in.
 """
 
 STATE_HINT_LVL5 = """
-The *book says that the straight road goes south-west to north-east and that the
-shrubs with the hintberries is on the west bank of a river that runs
-north-west. This means that the map on the *rug is tilted clockwise.
+There are many hints as to the true orientation of the map. Here are some:
 
-The houses are in fact forming a cross with the house at the top-right of the
+The *poster says that the (straight) road goes 'north-east from the village,
+past the forest'.
+
+The *book (reading about HINTBERRIES) mentions that the shrubs with the hintberries is
+on the west bank of a river that runs north-west.
+
+Looking out the windows shows the Jester's cabin being by the forest.
+Looking at the *roses, mentions that these roses are found on 'this side of the river'.
+The *book (reading about ROSES) says that these roses are on the east bank of the river.
+
+The houses are in fact forming a cross, with the house at the top-right of the
 map being the northernmost one.
 """
 

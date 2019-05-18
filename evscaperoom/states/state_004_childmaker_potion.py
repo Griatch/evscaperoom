@@ -278,7 +278,7 @@ CHILDMAKER_APPLY = """
 """
 
 CHILDMAKER_COVER = """
-You don't want to wipe away the potion, now that you've got it! 
+You don't want to wipe away the potion, now that you've got it!
 """
 
 
@@ -385,7 +385,7 @@ It looks official, something issued by the county law. It reads:
 
     Recognized by always wearing a |mmonkey-shaped mask|M and to not
     speak. Last seen riding a black horse on the road leading
-              north-east from the village.
+           north-east from the village, past the forest.
 
                           |mREWARD
                     100 silver coins
@@ -638,6 +638,19 @@ The Jester writes:
     (or drink) on his own anyway ... ?
 """
 
+BOOK_ROSES = """
+The Jester writes:
+
+    The roses around here are beautiful! I love roses, best flower -ever-. On
+    the east bank of the river are some really pretty pink ones I've been
+    eyeing.
+
+    I got help moving some of those pretty pink rose-bushes to plant by my
+    cabin! They were already pretty big but they seem to really prosper even
+    more by my windows. Now I can smell the roses every morning!
+
+"""
+
 
 BOOK_MAGUS = """
 The Jester writes:
@@ -792,7 +805,9 @@ class Book(objects.IndexReadable):
         "borrow": BOOK_BORROW,
         "borrowing": "borrow",
         "hintberries": BOOK_HINTBERRIES,
-        "hintberry": "hintberries"
+        "hintberry": "hintberries",
+        "roses": BOOK_ROSES,
+        "rose": "roses"
     }
 
     def at_read(self, caller, topic, entry):
