@@ -207,15 +207,20 @@ those people mentioned, particularly where they live.
 """
 
 STATE_HINT_LVL4 = """
-The book says that the straight road goes south-west to north-east and that the
-shrubs with the hintberries is on the west bank of a river that runs
-north-west. This means that the map on the *rug is tilted clockwise.
-
-The houses are in fact forming a cross with the house at the top-right being
-the northermost one.
+You don't actually know which direction on the map is North. Maybe you can find
+some more info about the village landmarks somewere to clue you in.
 """
 
 STATE_HINT_LVL5 = """
+The *book says that the straight road goes south-west to north-east and that the
+shrubs with the hintberries is on the west bank of a river that runs
+north-west. This means that the map on the *rug is tilted clockwise.
+
+The houses are in fact forming a cross with the house at the top-right of the
+map being the northernmost one.
+"""
+
+STATE_HINT_LVL6 = """
 By reading the *book, looking out the *windows and at the map on the *rug
 you can infer that:
 
@@ -228,16 +233,21 @@ you can infer that:
 
 """
 
-STATE_HINT_LVL6 = """
+STATE_HINT_LVL7 = """
 Each line of the rhyme corresponds to the compass direction of the house of the
-person the Jester is visiting (or staying at) for that line. Move the lever up
-for North, right for East etc. To open the chest, move the lever as follows:
+person the Jester is located at for that line.
+
+"""
+
+STATE_HINT_LVL8 = """
+Move lever up for North, right for East etc. To open the chest, move the lever
+as follows:
 
  |wright|n, |wleft|n, |wup|n, |wright|n,
  |wleft|n, |wdown|n, |wdown|n, |wright|n,
  |wup|n and then finally |wleft|n.
 
-When you hear a louder click, |wrotate|n the lever to unlock the chest.
+When you hear a louder, promising click, |wrotate|n the lever to unlock the chest.
 
 """
 
@@ -251,7 +261,9 @@ class State(BaseState):
              STATE_HINT_LVL3,
              STATE_HINT_LVL4,
              STATE_HINT_LVL5,
-             STATE_HINT_LVL6]
+             STATE_HINT_LVL6,
+             STATE_HINT_LVL7,
+             STATE_HINT_LVL8]
 
     def character_enters(self, character):
         self.cinematic(GREETING.format(name=character.key),
