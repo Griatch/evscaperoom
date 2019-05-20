@@ -27,7 +27,7 @@ The monkey Vale cheers and bounces as you triumphantly leave the cabin:
      And also had a lot of fun,
      Off to the fair you better run!"|n
 
-Then the monkey automaton grows still and quiet, its work done. You close the
+Then the monkey automaton grows still and quiet. Its work is done. You close the
 door to the Jester's cabin and |ghead out into the bright summer sun.|n
 
     (return to continue)
@@ -184,7 +184,7 @@ def collect_stats(caller, room):
 QUESTION1 = """
 |gQuestion one:
 
-    What's the real Vale's last name?|n
+    What is the last name of the real Vale?|n
 """
 
 QUESTION2 = """
@@ -215,58 +215,55 @@ reputation for a dangerous appetite.
     |w"But wait!"|n, calls the {spectator}. |w"Was not {name} supposed to be
     here too?"
 
-    |y"Yeah! That's someone who could give the Jester a run for her pies!"|n
-
-    |r"I don't see {name} around though..."|n the Jester coos 
+    |r"I don't see {name} around though..."|n the Jester coos
     innocently. |r"- But I'm sure they're having fun though, whever they are!"|n
 
     The {spectator} looks suspicious. |w"Girl, what have you done this time?"|n
 
     |r"Nooothing."|n
 
-    |y"Well, we must start"|n, says the judge. |y"If {name}|y does not show up,
+    |y"Well, we must start"|n, says the judge. |y"If {name}|y doesn't show up,
     that's their loss."|n
 
-    |r"You know what? I think so too."|n
-
-The judge shrugs and prepares to start the contest.
+The judge shrugs and prepares to start the contest ...
 """
 
 # we missed the contest
 
 
 ENDING_CONTEST_MISSED_1 = """
-... However, when this all took place, you were just struggling to make sense
-of the rug-map puzzle. You were nowhere near the village and completely missed
-the whole thing.
+... However, when this took place, you were just struggling to make sense
+of the rug-map puzzle. You were nowhere near the village and |Rcompletely missed
+the whole thing|n.
 
-As you finally make your way back to town, the pie contest is long over, the
-tables filled with empty plates. The |rJester|n sits on the middle of the table
-waiting for you.
+As you finally make your way back to town, the pie contest is long over. The
+tables are filled with empty plates. The |rJester|n sits on a table waiting for
+you.
 
     |r"You know"|n, she says, |r"That was a pretty pathetic."|n
 
 Fuming, you tower over her, but she continues unabated:
 
-    |r"I really thought you'd make it at the last minute! I found out that it
-    was not as fun to beat the snot out of you in pie-eating when you where not
-    even there!"
+    |r"I really thought you'd make it at the last minute! I realized it was not
+    at all fun to beat the snot out of you in pie-eating when you where not
+    even there to see it!"
 """
 
 ENDING_CONTEST_MISSED_2 = """
-You are about to tell the Jester a truthful curse or two when she reaches behind
-her.
+You are about to tell the Jester a truthful curse or two when she reaches
+behind her.
 
     |r"I did save this for you though, slow-pokes."|n
 
-From behind her she pulls out one of Mrs Bullington's pies. That distracts you,
-and you stare as he holds it up to your face.
+From behind her, the Jester pulls out one of Mrs Bullington's pies. That
+distracts you, and you stare as he holds it up to your face.
 
     |r"After that debacle, this is just what you deserve."|n
 
-Then she smacks the pie flat in your face.
+Before you can react, she smacks the pie flat in your face. Before you manage
+to recover she has already taken off, her giggle echoing between the buildings.
 
-So at least this ends in pie.
+She got you good, this time. But at least it ended in pie.
 """
 
 # we arrive but we lose the contest
@@ -274,39 +271,37 @@ So at least this ends in pie.
 
 ENDING_CONTEST_DEFEAT_1 = """
 ... But there you are! A bit out of breath, but you made it! Your friends cheer
-as you take a seat. You glare at the Jester across the table. She grins and
-puts out her tongue to you.
+as you take a seat. You glare at the Jester across the table. She puts out her
+tongue to you.
 
     |r"Better late than never! I didn't think my front door was -that- hard for
     you to open!"|n
 
 Before you can reply, the contest is under way! In a storm of pie eating frenzy
-you all dive into the plates. You eat a pie and then reaches for the next.  The
+you all dive into the plates. You eat a pie and then reach for the next. The
 Jester does the same. As the contest goes on, more and more villagers are
-forced to step back from their plates. Yet the two of you keep eating ...
+forced to give up. Yet the two of you keep eating ...
 
 """
 
 ENDING_CONTEST_DEFEAT_2 = """
-... But then your stomach just can't take it anymore. Maybe your time in her
-cabin mixing all those nasty ingredients is taking their toll. The pie is about
-to come back up again. Pale-faced you lean back from the plate.
+... But then your stomach just can't take it anymore. Maybe mixing all those
+nasty ingredients is taking their toll - the pie is about to come back up
+again.  Pale-faced you lean back from the plate.
 
     |r"Does that mean I win?"|n the Jester asks over the edge of her
     plate. The crowd goes wild.
 
-With a bit of cheating too, you think bitterly as the Jester gets celebrated
-for her win.
-
 Some time later, the Jester comes and sits down across from you.
 
-    |r"Oooh, looks like you are FUMING"|n she says, "Well, I can't help you were
-    so crappy at solving my easy little game! Besides, now you have an
+    |r"Oooh, looks like you are FUMING"|n she says, "Well, I can't help that
+    you were so crappy at solving my easy little game! Besides, now you have an
     excuse for losing to someone half your size, eh?"|n
 
 You've had enough.
 
-    |c"I know someone who's taking a dip in the river very soon"|n, you say.
+    |c"I know someone who's taking a dip in the river very soon!"|n, you say and
+    stand up.
 
 The Jester's eyes go wide.
 """
@@ -318,7 +313,7 @@ ENDING_CONTEST_WIN_1 = """
 seat. The Jester looks amused as she take you in.
 
     |r"Hah, I -knew- you'd make it! It would not have been nearly as much
-    fun to out-eat you if you wheren't here. So let's go at it then!"
+    fun to out-eat you if you wheren't here. So let's go at it then!"|n
 
 The contest starts and all the contestants dig into their pies. You finish a
 pie and then another one. Things are going well! But the Jester keeps pace.
@@ -328,22 +323,23 @@ the two of you keep eating ...
 """
 
 ENDING_CONTEST_WIN_2 = """
-Finally the Jester burps loudly, sways and collapses over her plate.
+... Finally the Jester burps loudly, sways and collapses over her plate.
 
     |r"I ... haven't given up ... just resting a little ..."
 
-There is of course no such thing as resting in a pie eating contest! You |gwin|n!
-Sweet triumph! You are celebrated in town as the new pie-eating champion!
+There is of course no such thing as resting in a pie eating contest! You
+|gwin|n!  Sweet triumph! You are celebrated in town as the new pie-eating
+champion!
 
 Some time later you go and sit across from the Jester, who has now recovered.
 You feel you have the right to gloat:
 
     |c"You tried your hardest to lock me in! But your plan failed! I won
-    against the odds!"|n
+    against all odds!"|n
 
 The Jester winks and taps your shoulder.
 
-    |r"The odds? Buddy, you just out-ate a girl half your size. Congrats."|n
+    |r"All odds? Buddy, you just out-ate a girl half your size. Congrats?"|n
 
 You glare at her and stand up.
 
@@ -357,23 +353,23 @@ The Jester's eyes go wide.
 
 ENDING_CONTEST_DOMINATE_1 = """
 
-    |c"I'm right here"|n you say and step forth.
+    |c"I'm right here!"|n you say and step forth.
 
-Calmly you take your seet across the Jester. She watches you with narrow
+Calmly you take your seat across the Jester. She watches you with narrow
 eyes.
 
     |r"My, maybe I've understimated you. How fun! Let's eat!"|n
 
-The contest starts. Everyone dives down on their pies in a frenzy. You finish a
-pie and reach for another. You feel strong and edged on by righteous
-indignation over the trick your opponent tried to pull on you.
+The contest starts. Everyone digs into their pies in a frenzy. You finish a pie
+and reach for another. You feel strong and are edged on by righteous indignation
+over the trick your opponent tried to pull on you.
 
 One by one the other contestants have to forfeit. Yet the two of you keep
 eating ...
 """
 
 ENDING_CONTEST_DOMINATE_2 = """
-Finally the Jester bites down on the pie, but then lets it fall down on the plate
+Finally the Jester bites down on a pie, only let it fall back on the plate
 again. You meet her gaze across the table, just as you reach for another pie.
 
     |r"You keep eating that"|n she says, weakly. |r"I'll just go barf over here
@@ -400,7 +396,7 @@ The Jester smiles sweetly:
 You nod and stand up.
 
     |c"Well, maybe so. But at least I know one half-sized girl who has more
-    than earned herself a full-sized dip in the river."|n
+    than earned herself a full-sized dip in the river!"|n
 
 The Jester's eyes go wide.
 """
@@ -408,13 +404,13 @@ The Jester's eyes go wide.
 # whois vale
 
 ENDING_VALE_MAGUS = """
-"|gAs you walk towards the village, you conclude that the Magus, master
-Bloch's first name must be |wVale|n. |wVale Bloch|G.
+"|gAs you walk towards the village, you conclude that the Magus, master Bloch's
+first name must be |wVale|n. |wVale Bloch|G.
 
-Everyone thought he just made wine with those hintberries but in in the letter
-he wrote (but never sent) to Agda, he claims to use them for some sort of
+Everyone thought he just made wine with those hintberries but in the letter he
+wrote (but never sent) to Agda, he claims to use them for some sort of
 experiments to make her 'better', whatever that means. He seems convinced some
-other person were dangerous but accidentally poisoned Agda instead of his
+other person was dangerous. But he accidentally poisoned Agda instead of his
 intended target. Apparently Agda's docile and aloof persona was not always like
 that - she seemed to bully him in the past. Vale didn't seem to care though -
 he just blindly wanted her back the way she was, no matter what.|g
@@ -422,7 +418,7 @@ he just blindly wanted her back the way she was, no matter what.|g
 In one of the pages of the book, the Jester says that she'll name the toy
 monkey after the next person to make her cry. In the rhyme, the Jester took the
 letter from the Magus and read it. Maybe the contents of that letter is what
-made her cry and that's why she named the monkey Vale.|n
+made her cry. Maybe that's why she named the monkey Vale.|n
 """
 
 ENDING_VALE_BLACKSMITH = """
@@ -434,15 +430,15 @@ created the Monkey bearing the same name - the toy even said the Blacksmith
 cried when doing it. So the Jester named the toy as an homage to him.|g
 
 In the letter from 'Vale', he talks like he hurt Agda in the past. Maybe he
-conspired or stole some concoction from the Magus to do what he di. It could be
-why the Blacksmith is so grumpy. He was even married in the past, according to
-the Jester. Maybe it was to Agda.|n
+conspired or stole some concoction from the Magus to do what he did. It could
+be why the Blacksmith is so grumpy. He was even married in the past, according
+to the Jester. Maybe it was to Agda.|n
 
 """
 
 ENDING_VALE_BAKER = """
-|gAs you walk towards the village you conclude that the Baker's first name
-must be |wVale|g - |wVale Bullington|g, short for |wValerie|n, maybe?|G
+|gAs you walk towards the village you conclude that the Baker's first name must
+be |wVale|g - |wVale Bullington|g, short for |wValerie|n, maybe?|G
 
 Vale's secret is her hidden love for Agda, whom she adresses in her letter.
 She has good access to hintberries (just cross the road!) and could have gotten
@@ -451,7 +447,7 @@ at someone else, but got Agda by accident. Her aloof persona is simply her
 being constantly consumed by plans to make things better!|g
 
 The Jester clearly named the monkey 'Vale' as a mockery of the Baker. Love is a
-joke to that one, you are sure.|n
+joke to the Jester, of that you are sure.|n
 """
 
 ENDING_VALE_JESTER = """
@@ -463,21 +459,21 @@ to speak for her than a mechanical monkey? The thing even said so itself - she
 cannot bear being serious. So the monkey does it for her.|g
 
 You wonder if 'Agda' even exists or if she's some figment of the Jester's
-imagination. All the details of the book, all those notes and comments clearly
+fantasies. All the details of the book, all those notes and comments clearly
 suggests someone with a great deal of imagination and unhealthy fascination
-with tiny and useless details. Maybe this whole thing was just so that Jester
+with tiny and useless details. Maybe this whole thing was just so that the Jester
 could find a good rhyme for 'Baker' ...|n
 
 """
 
 ENDING_VALE_OTHER = """
-|gAs you walk towards the village you conclude that 'Vale' probably didn't exist
-at all. The Jester probably just made it up for her game. She mixed in some
+|gAs you walk towards the village you conclude that 'Vale' probably didn't
+exist at all. The Jester just made the name up for her game. She mixed in some
 real names from the village to make it more interesting.|G
 
-Maybe she pictured her new toy 'Vale' to be writing the letter. It would
-sound like her to think it being truly alive. She then gave it a whole
-back story and a little mystery.|g
+Maybe she pictured her new toy 'Vale' to be writing the letter. It would sound
+like her to imagine the mobkey being truly alive. She then gave it a whole back
+story and a little mystery.|g
 
 She's always trying to fool you, but this time you figured her out!|n
 """
@@ -493,10 +489,10 @@ ENDING_VALE_MAP = {
 # knowing the monkey bandit
 
 ENDING_MONKEY_MAGUS = """
-|gAfter having thought about it, you draw the amazing conclusion that the |wMagus|g,
-|wVale|g, once was the Mute Monkey bandit!|G
+|gAfter having thought about it, you draw the amazing conclusion that the
+|wMagus|g, |wVale|g, once was the Mute Monkey bandit!|G
 
-Clearly the Jester things so too. She even named the monkey 'Vale'. And the
+Clearly the Jester thinks so too. She even named the monkey 'Vale'. And the
 mask it wears is eerily similar to the bandit's.|g
 
 Master Bloch was once young too. He could well have been good with knife and
@@ -507,8 +503,8 @@ sort of magical talisman to cast fear in his victims.|G
 If he wrote the letter from 'Vale', it was either a forgery or him trying to
 justify his actions to himself - that's why he burned it; it was never meant to
 be read by anyone by himself. Most likely someone discovered his identity and
-he tried to use his potion to get rid of that person. He stopped being the Monkey
-after poisoning Agda. Maybe he realized what he had become.|g
+he tried to use his potion to get rid of that person. He stopped being the
+Monkey after poisoning Agda. Maybe he realized what he had become.|g
 
 Then again, he claims poisoning Agda was a mistake, but who knows, right?|n
 
@@ -516,11 +512,11 @@ Then again, he claims poisoning Agda was a mistake, but who knows, right?|n
 
 ENDING_MONKEY_BLACKSMITH = """
 |gAfter having thought long and hard about it, you think that the |wBlacksmith|g,
-|wAngus|g, was the Mute Monkey Bandit as a young man!|G
+|wAngus|g, was the Mute Monkey Bandit back in the day!|G
 
-The blacksmith is a crafty man, strong and good with his hands. Surely he was a
-formidable man in his youth. The saddle hanging in the rafters also shows signs
-of battle and maybe blood. It's marked AW - Angus Warwick.|g
+The blacksmith is a crafty man, strong and good with his hands. Surely he was
+formidable in his youth. The saddle hanging in the rafters also shows signs of
+battle and maybe blood. It's marked AW - Angus Warwick.|g
 
 The Jester found that the Blacksmith was married once - what if it was to Agda?
 In Vale's letter, the author says that he wanted to save Agda from "him". Agda
