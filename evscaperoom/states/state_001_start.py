@@ -1866,7 +1866,7 @@ the mirror itself is attached to the backplate with a few metal nubs.
 """
 
 MIRROR_ROTATE = """
-On the back of the hand mirror, the letters "P.B." have been burned into the
+On the back of the hand mirror, the letters "V.B." have been burned into the
 wood with a heated poker.
 """
 
