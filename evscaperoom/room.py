@@ -174,7 +174,7 @@ class EvscapeRoom(EvscaperoomObject, DefaultRoom):
         char.location = char.home
 
         # check if room should be deleted
-        if len(self.get_all_characters()) <= 1:
+        if len(self.get_all_characters()) < 1:
             self.delete()
 
         # we must run menu after deletion so we don't include this room!
