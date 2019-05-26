@@ -531,9 +531,9 @@ The poster and the Jester's research found that the bandit nearly killed a kid.
 Maybe that caused the Blacksmith to rethink his life. These days he's making
 kid's toys - maybe that's his way to recant.|G
 
-Finally, when he made the Monkey automaton for the Jester, he glared at her but
-was very fast about it. That's because he already had the face - its face is
-the same mask that the bandit wore!|n
+Finally, when he made the Monkey automaton for the Jester, he cried but was
+very fast about it. That's because he already had the face - its face is the
+same mask that the bandit wore.|n
 
 """
 
@@ -546,17 +546,20 @@ people would immediately hear it was a woman. This was how the bandit could
 appear out of nowhere too - she would just change her clothes and hide the mask
 and no one would suspect her being nearby.|g
 
-Agda and the Blacksmith could have been - or maybe still are - married, despite
-livibg apart. Maybe he even created the mask, but as she grew more violent, his
-heart grew cold. Agda was a bully and probably perfectly aware that Vale was
-hopelessly in love with her. She 'confided' in him that her husband was the
-bandit as a backup in case her husband should turn on her. Vale believed her
-without question.|G
+According to the Jester, Agda and the Blacksmith were once married, despite now
+living apart. From the letter we learn that Agda was a bully to Vale, maybe to
+her husband too. Maybe the Blacksmith even once created the mask for her. But
+as the bandit grew more violent, his heart grew cold and she noticed. Agda was
+probably perfectly aware that Vale was hopelessly in love with her. She
+'confided' in him that her husband was the bandit as a backup in case her
+husband should turn on her. Vale believed her without question.|G
 
-But she didn't count on Vale taking matters into his own hands. After the
-incident where the Bandit nearly killed a young kid, Vale used the childmaker
-potion to try to poison the Blacksmith. But the Blacksmith was so distraught
-over his wife's actions that he lost his appetite and Agda ate his pie instead.|g
+But Agda didn't count on Vale taking matters into his own hands. Just before
+the fair, the bandit nearly killed a young kid. This led to Vale trying to use
+the childmaker potion to stop the Blacksmith, whom he thought was the bandit.
+Maybe the Blacksmith hadn't heard about the incident until just before the
+pie-eating contest. That's why he lost his appetite and the title of pie-eating
+champion. Agda then ate his pie instead.
 
 The reason the Mute Monkey Bandit disappeared is because Agda's mind was ruined
 by Vale's potion. He got the right villain by accident.|n
@@ -586,8 +589,8 @@ than a legend. A local bandit with a mask probably existed but over the years
 his legend grew.|G
 
 The Jester loves stories and legends. She took this one and expanded on it with
-a whole fanciful mystery for the sake of her little 'game'. She even ordered a
-toy monkey with a look based on the old poster!|g
+a whole fanciful mystery for the sake of her little 'game'. She write herself
+that she ordered the  toy monkey with a look based on the old poster!|g
 
 If the original bandit ever existed he is probably either dead or very old by
 now awyway.|n
@@ -607,48 +610,47 @@ ENDING_MAIDEN_NAME_MAGUS = """
 |gYou turn up on bridge across the river. You think you know what the Jester's
 maiden name must be. It is |wBloch|g, as in the Magus' last name.|G
 
-The Jester spends a lot of time over at the Magus' house. She sits and listen
-to him talk for hours on end. The old man clearly likes to keep him around,
-he even tells her about his experiments.|g
+The Jester spends a lot of time over at the Magus' house. She sits and listens
+to him talk for hours on end. The old man clearly likes to keep her around.|g
 
 The monkey made it clear that the Jester can't take things seriously even if
-she wanted. She could maybe not tell you this herself, but had to device this
+she wanted to. She could maybe not tell you this herself, but had to device this
 strange game for you to figure it out on your own.|G
 
 The Magus and his damned 'childmaker' potion. By accident he poisoned Agda with
 it, but how did he know it worked on humans? He only mentions a cat in the
 recipe. The Jester sure acts like a child, yet everyone thinks she's probably
 older than she acts and looks.  What if the Jester is one of his early
-experiments? He could have adopted her as her daughter in that case.|g
+experiments?|g
 
 He could have sent her away and only now arranged to get her back, to see the
-effects of his potion over a long time. He'd want to know that if he wants
+effects of his potion over a longer time. He'd want to know that if he wants
 to help Agda ... |n
 
 """
 
 ENDING_MAIDEN_NAME_BLACKSMITH = """
-|gAs you turn the corner and step up on the bridge across the river, you realize
-that you know what the Jester's maiden name is. It is |wWarwick|g, as in the
-Blacksmith. The Jester's notes suggest that Maiden names are always taken from
-the -father- in these parts after all.|G
+|gAs you turn the corner and step up on the bridge across the river, you
+realize that you know what the Jester's maiden name is. It is |wWarwick|g, as
+in the Blacksmith's last name. The Jester's notes suggest that Maiden names are
+always taken from the -father- in these parts after all.|G
 
 The Jester seems to think the Blacksmith and the Baker are married but are now
-living apart. Agda was poisoned by the Vale's potion and that messed her up. In
-his letter he also mentions 'her other condition'. This could meant that Agda
-was pregnant when she got the childmaker potion. The letter also suggests that
+living apart. Agda was poisoned by Vale's potion and that messed her up. In his
+letter he also mentions 'her other condition'. This could mean that Agda was
+pregnant when she had the childmaker potion. The letter also suggests that
 Agda's child was sent away since she was unable to care for another life.|g
 
 The notes for the childmaker potion tells about the experiment with a cat and
-its kittens. If the childmaker affects a kitten, maybe it also affects a child
-...  A child that grew up outside the village and only came to search her roots
-just recently. A child that had grown up and yet never truly did.|G
+its kittens. If the childmaker affects a kitten, maybe it also affects a
+child ...  A child that grew up outside the village and only came to search her
+roots just recently. A child that had grown up and yet never truly did.|G
+
+No one knows who she really is - maybe because the Jester can't bring herself
+to be serious about anything - the monkey said as much. Maybe this 'game' of
+hers was her way of telling her story in the most convoluted way possible ...|n
 
 The Jester is none other than the daughter of Agda and Angus Warwick!|g
-
-They probably doesn't know who she is either. The monkey said that the Jester
-cannot handle being serious even if she wants to. Maybe this 'game' of hers was
-her way of telling her story in the most convoluted way possible ...|n
 """
 
 ENDING_MAIDEN_NAME_BAKER = """
@@ -664,7 +666,7 @@ but that 'Bullington' he Baker's own maiden name. This is why the Jester
 researched maiden names in her book! For the Jester to have her name, she must
 either have gotten the child before the marriage or after being separated or
 divorced for a long time. She was completely messed up by Vale's potion, so it
-must have happened before the marriage then.|G
+must have happened before the marriage.|G
 
 That would make the Jester the baker's illegitimate daughter!|n
 """
@@ -675,8 +677,8 @@ ENDING_MAIDEN_NAME_OTHER = """
 not sure if Jesters even -have- maiden names.|G
 
 The Jester is the kind of person that could just have spawned fully formed and
-then never change after that day. The thought of Jesters popping up out of the
-ground is both amusing and disturbing as you quicken your steps ...|n
+then never change again after that day. The thought of Jesters popping up out
+of the ground is both amusing and disturbing to you as you quicken your steps ...|n
 
 """
 
