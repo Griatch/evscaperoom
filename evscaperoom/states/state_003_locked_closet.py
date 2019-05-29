@@ -28,7 +28,7 @@ GREETING = """
 ROOM_DESC = """
 The |rJester's cabin|n is actually just a small single room with a *door.
 Ample light enters from two *windows on each side. The underside of the sloping
-roof is exposed (as are the *(rafters holding them up), making the place taller
+roof is exposed (as are the *rafters holding them up), making the place taller
 and feel more spacious than it is.
 
 On the wall opposite the door is a small stone *fireplace, lined to the left
@@ -169,7 +169,7 @@ Vale mutters over by the door:
 """
 
 STATUE_RANDOM_CHATTER5 = """
-Over by the door, the monkey-thing hums contentedly to itelf.
+Over by the door, the monkey-thing hums contentedly to itself.
 """
 
 STATUE_RANDOM_CHATTER6 = """

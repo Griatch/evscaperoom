@@ -216,7 +216,7 @@ reputation for a dangerous appetite.
     here too?"
 
     |r"I don't see {name} around though..."|n the Jester coos
-    innocently. |r"- But I'm sure they're having fun though, whever they are!"|n
+    innocently. |r"- But I'm sure they're having fun though, whoever they are!"|n
 
     The {spectator} looks suspicious. |w"Girl, what have you done this time?"|n
 
@@ -313,7 +313,7 @@ ENDING_CONTEST_WIN_1 = """
 seat. The Jester looks amused as she take you in.
 
     |r"Hah, I -knew- you'd make it! It would not have been nearly as much
-    fun to out-eat you if you wheren't here. So let's go at it then!"|n
+    fun to out-eat you if you weren't here. So let's go at it then!"|n
 
 The contest starts and all the contestants dig into their pies. You finish a
 pie and then another one. Things are going well! But the Jester keeps pace.
@@ -358,7 +358,7 @@ ENDING_CONTEST_DOMINATE_1 = """
 Calmly you take your seat across the Jester. She watches you with narrow
 eyes.
 
-    |r"My, maybe I've understimated you. How fun! Let's eat!"|n
+    |r"My, maybe I've underestimated you. How fun! Let's eat!"|n
 
 The contest starts. Everyone digs into their pies in a frenzy. You finish a pie
 and reach for another. You feel strong and are edged on by righteous indignation
@@ -440,7 +440,7 @@ ENDING_VALE_BAKER = """
 |gAs you walk towards the village you conclude that the Baker's first name must
 be |wVale|g - |wVale Bullington|g, short for |wValerie|n, maybe?|G
 
-Vale's secret is her hidden love for Agda, whom she adresses in her letter.
+Vale's secret is her hidden love for Agda, whom she addresses in her letter.
 She has good access to hintberries (just cross the road!) and could have gotten
 hold of the recipe from the Magus, same as the Jester did. She aimed her poison
 at someone else, but got Agda by accident. Her aloof persona is simply her
@@ -451,7 +451,7 @@ joke to the Jester, of that you are sure.|n
 """
 
 ENDING_VALE_JESTER = """
-|gAs you walk towards the village you conclude that Vale is infact |wthe Jester
+|gAs you walk towards the village you conclude that Vale is in fact |wthe Jester
 herself|n. Maybe it's short for |wValerie|g or something.|G
 
 No one knows the Jester's name. She cannot take anything seriously. Whom better
@@ -472,7 +472,7 @@ exist at all. The Jester just made the name up for her game. She mixed in some
 real names from the village to make it more interesting.|G
 
 Maybe she pictured her new toy 'Vale' to be writing the letter. It would sound
-like her to imagine the mobkey being truly alive. She then gave it a whole back
+like her to imagine the monkey being truly alive. She then gave it a whole back
 story and a little mystery.|g
 
 She's always trying to fool you, but this time you figured her out!|n
@@ -539,7 +539,7 @@ same mask that the bandit wore.|n
 
 ENDING_MONKEY_BAKER = """
 |gAfter having thought it through, you reach the conclusion that the |wBaker|n,
-|gAgda|g, was in fact the the Mute Monkey Bandit!|G
+|gAgda|g, was in fact the Mute Monkey Bandit!|G
 
 Why did the bandit wear a mask? Why was he mute? That's because if she spoke
 people would immediately hear it was a woman. This was how the bandit could
@@ -593,7 +593,7 @@ a whole fanciful mystery for the sake of her little 'game'. She write herself
 that she ordered the  toy monkey with a look based on the old poster!|g
 
 If the original bandit ever existed he is probably either dead or very old by
-now awyway.|n
+now anyway.|n
 
 """
 
@@ -654,15 +654,15 @@ The Jester is none other than the daughter of Agda and Angus Warwick!|g
 """
 
 ENDING_MAIDEN_NAME_BAKER = """
-|gAs you turn the the corner and step up onto the bridge across the river,
+|gAs you turn the corner and step up onto the bridge across the river,
 you ponder the possibility that |wBullington|g is the Jester's maiden name.|G
 
 Mrs Bullington has lived alone for a long time and she's pretty weird. But the
 Jester is also pretty weird! And in her notes she did show a large amount of
 interest in the baker.|g
 
-The Jester suggests in her texs that Mrs Bullington was married at some point,
-but that 'Bullington' he Baker's own maiden name. This is why the Jester
+The Jester suggests in her text that Mrs Bullington was married at some point,
+but that 'Bullington' was the Baker's own maiden name. This is why the Jester
 researched maiden names in her book! For the Jester to have her name, she must
 either have gotten the child before the marriage or after being separated or
 divorced for a long time. She was completely messed up by Vale's potion, so it
