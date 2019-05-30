@@ -196,7 +196,7 @@ You heated the cauldron, maybe time to look inside it?
 
 ... what, you thought it was more complex than that?
 
-Maybe the next piece of pie will be more informative though.
+But the NEXT piece of pie will have something REALLY interesting.
 """
 
 STATE_HINT_LVL2 = """
@@ -204,7 +204,7 @@ Open the door with *key you found in the *cauldron.
 
 Yep, there is no more trick to it.
 
-But the NEXT piece of pie will have something really interesting.
+The next piece of pie will be more informative though.
 """
 
 STATE_HINT_LVL3 = """
@@ -229,7 +229,7 @@ STATE_HINT_LVL6 = """
 So here's the big secret, finally:
 
 Every pie you eat makes it harder for you to beat the Jester in the pie-eating
-contest. That's pretty obvious when you think about it. 
+contest. That's pretty obvious when you think about it.
 
 ... So, no, that was not really the secret. Have one more slice and uncle pie
 will tell you.
@@ -257,6 +257,15 @@ STATE_HINT_LVL11 = """
 The pie is just messin' with you, you know. Wobble out of here now.
 """
 
+STATE_HINT_LVL12 = """
+At least you are really, really full of pie!
+"""
+
+STATE_HINT_LVL13 = """
+This is the thirteenth piece of pie you've eaten just to figure out how to open
+a door. Congratulations.
+"""
+
 
 class State(BaseState):
 
@@ -272,7 +281,9 @@ class State(BaseState):
              STATE_HINT_LVL8,
              STATE_HINT_LVL9,
              STATE_HINT_LVL10,
-             STATE_HINT_LVL11]
+             STATE_HINT_LVL11,
+             STATE_HINT_LVL12,
+             STATE_HINT_LVL13]
 
     def character_enters(self, character):
         self.room.achievement(
