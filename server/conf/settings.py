@@ -32,7 +32,7 @@ from evennia.settings_default import *
 ######################################################################
 
 # This is the name of your game. Make it catchy!
-SERVERNAME = "evscaperoom"
+SERVERNAME = "EvscapeRoom"
 
 TYPECLASS_PATHS += ["evscaperoom"]
 
@@ -46,6 +46,26 @@ GUEST_LIST = ["Avofee", "Bergine", "Caerin", "Duvoe", "Ergaloe", "Farala",
               "Riftdin", "Saela", "Turvadi", "Uiviite", "Vegdarin", "Xinai",
               "Ylveur", "Zatharyn"]
 
+GAME_INDEX_LISTING = {
+    'game_status': 'launched',
+    # Optional, comment out or remove if N/A
+    'game_website': 'http://experimental.evennia.com',
+    'short_description': "Multiplayer 'escape-room' with full story",
+    # Optional but highly recommended. Markdown is supported"
+    'long_description': (
+        """This is a multiplayer 'escape room' created in Evennia. It has a
+        (maybe surprisingly deep) story with creepy monkeys, silly antics and
+        pie. Lots of pie.\n\nThe Evscaperoom was created in a month for the Game Creator's Guild's
+        second Game Jam, which had the theme *One Room*.\n\nTry it out! The engine will 
+        likely become an Evennia contrib. The source code is available online (see website)."""
+    ),
+    'listing_contact': 'griatch@gmail.com',
+    # At minimum, specify this or the web_client_url options. Both is fine, too.
+    'telnet_hostname': '128.199.48.138',
+    'telnet_port': 4000,
+    # At minimum, specify this or the telnet_* options. Both is fine, too.
+    'web_client_url': 'http://experimental.evennia.com/webclient',
+}
 
 ######################################################################
 # Settings given in secret_settings.py override those in this file.
