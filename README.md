@@ -32,7 +32,7 @@ branch with Python3.7. If you are an Evennia user, that's all you need to know!
 into the container)
 
 - `evennia migrate`  (only first time)
-- `evennia start`  (create a superuser. Email can be blank)
+- `evennia start`  (create a superuser. The email can be blank)
 
 You can now connect your browser to `http://localhost:4001` or your mud client
 to `localhost`, port `4000`. To play and enjoy the game, best is to *not* log
@@ -42,12 +42,12 @@ Enjoy!
 
 ## Installation
 
-You need the [Evennia](https://github.com/evennia/evennia) engine to run. You need GIT to
-fetch Evennia and Python3.7. Below are copyable instructions for an apt-able
-Linux (tested on Linux Mint), but you can install on Windows and Mac too very
-similarly, see Evennia's [Getting Started](https://github.com/evennia/evennia/wiki/Getting-Started)
+You need the [Evennia](https://github.com/evennia/evennia) engine to run. You need Python3.7 and GIT to
+fetch Evennia. Below are copyable instructions for an apt-able
+Linux (tested on Linux Mint), but you can install on Windows and Mac too, see Evennia's [Getting Started](https://github.com/evennia/evennia/wiki/Getting-Started)
 instructions where this is explained in more detail (in those instructions you
-don't need to create the `mygame` folder since this repo replaces that).
+don't need to create the `mygame` folder since this repo replaces that). Note however that this uses the 
+develop-branch of Evennia which may not be fully stable at all times.
 
 - `sudo apt-get update && sudo apt-get install python3.7 python3.7-dev git python-pip python-virtualenv gcc`
 - `mkdir evscaperoom && cd evscaperoom`
@@ -56,18 +56,18 @@ don't need to create the `mygame` folder since this repo replaces that).
 - `virtualenv --python /usr/bin/python3.7 vienv`
 - `source vienv/bin/activate`
 
-Make sure the `source` command makes your terminal prompt change to `(vienv)`. This you
+Make sure the last `source` command makes your terminal prompt change to `(vienv)`. This you
 need to re-run if you start a new terminal later, since we are installing Python stuff into 
 this virtual Python environment.
 
 - `cd evennia && git checkout develop && cd ..` 
 - `pip install -e evennia`
 
-You should now have switched to Evennia's `develop branch` and installed
+You should now have switched to Evennia's `develop` branch and installed
 Evennia in the virtualenv. 
 
 - `cd evscaperoom`
-- `evennia migrate` (create a superuser when asked, email can be empty)
+- `evennia migrate` (create a superuser when asked, email can be blank)
 - `evennia start`
 
 You can now browse to http://localhost:4001 to play the game. Or connect your
