@@ -740,7 +740,7 @@ class Socks(objects.Feelable, objects.Smellable, objects.Usable):
 # ------------------------------------------------------------
 
 BATHTOWEL_DESC = """
-This is a large blue bath towel. It looks pretty heavily used but the cloth is
+This is a large pink bath towel. It looks pretty heavily used but the cloth is
 thick and is of good quality. In the corner of it you find the initials "AB".
 """
 # (AB - Agda Bullington)
