@@ -47,7 +47,7 @@ The rest of the closet is empty, but on the back wall of the closet is a big
 """
 
 CLOSET_THINK = """
-This looks less like a a closet and more like a workspace. Almost as if the
+This looks less like a closet and more like a workspace. Almost as if the
 Jester was doing ... research? Is she just messing with me here?
 """
 
@@ -140,7 +140,7 @@ language you can never hope to decipher.
 
 BOWL_TURN = """
 You look at the bottom of the bowl find a neat label. It's written in tight
-and preciese hand writing.
+and precise hand writing.
 
     |mLEVEL FIVE ALCHEMIC MIXING BOWL
 
@@ -685,9 +685,9 @@ The paper is old. This is not a new discovery.
         Add in this exact order the following ingredients into an alchemic
         mixing bowl of a least level three:
 
-            - 1 small drop of the liquified carcass of a dog dead on a Tuesday
+            - 1 small drop of the liquefied carcass of a dog dead on a Tuesday
             - A sprinkle of a girl's favorite perfume
-            - A sqint of Naturally produced Ammoniac
+            - A squirt of Naturally produced Ammoniac
             - Some drops of bottled Arrogance (Beet juice works too).
             - Another drop of carcass
             - Something from a grown child
@@ -696,11 +696,11 @@ The paper is old. This is not a new discovery.
             I inherited this recipe from my grandfather. He called it 'the
             potion of youth' but it's nothing as benevolent as that. In secret
             I tested it on one of the adult farmer cats to terrifying effect -
-            the cat didn't rejuvinate but instead it reverted to -acting- as a
+            the cat didn't rejuvenate but instead it reverted to -acting- as a
             young kitten. Worse, soon after, it had a litter of kittens of its
             own. Her kittens were not only smaller than normal, they grew only
             very slowly and also never reached full maturity or adult behavior.
-            Not only does it appear the effect is permantent - it spreads
+            Not only does it appear the effect is permanent - it spreads
             across generations!
 
             This thing is -very- dangerous!  But it's my most potent mixture,
@@ -827,7 +827,7 @@ class Book(objects.IndexReadable):
         self.set_flag("looking_glass_sun")
 
     def get_cmd_signatures(self):
-        txt = (f"Use *read <topic> to look something up - you can't start readng this thing from "
+        txt = (f"Use *read <topic> to look something up - you can't start reading this thing from "
                "beginning to end if you hope to get out of here before the pie-eating "
                "contest!")
         return [], txt
@@ -838,7 +838,7 @@ class Book(objects.IndexReadable):
 # ------------------------------------------------------------
 
 STATE_HINT_LVL1 = """
-You should read the *book in the *closet. It has some nice recipies that may
+You should read the *book in the *closet. It has some nice recipes that may
 interest you.
 """
 
@@ -849,9 +849,9 @@ Be aware of those labels though, better not trust them ...
 """
 
 STATE_HINT_LVL3 = """
-The Jester has swapped those lables around. Smell them to find out what's what:
+The Jester has swapped those labels around. Smell them to find out what's what:
 
-- The liquified carcass smells horrible.
+- The liquefied carcass smells horrible.
 - The fool's favorite perfume is rose-water. So it smells like roses (duh)
 - Natural ammoniac is in urine and thus smells of the loo.
 - Arrogance/Beet juice has an earthy smell.
