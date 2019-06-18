@@ -1,7 +1,8 @@
 # EvscapeRoom
 
 Created for the MUD Coders Guild game Jam, April 14-May 15 2019. The theme for
-the jam was "One Room".
+the jam was "One Room". For now, a running install of this game is found at 
+[experimental.evennia.com](http://experimental.evennia.com).
 
 # Introduction
 
