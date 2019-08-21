@@ -19,8 +19,8 @@ better you'll do ...
 
 ## Short: 
 
-This comes as an Evennia game folder and makes use of Evennia's latest `develop`
-branch with Python3.7. If you are an Evennia user, that's all you need to know! 
+This comes as an Evennia game folder and makes use of Evennia `master` branch (using Python 3.7). 
+If you are an existing Evennia user, that's all the info you need! 
 
 ## Running through docker
 
@@ -41,7 +41,7 @@ in as the superuser you created, but to make a new, normal player account.
 
 Enjoy!
 
-## Installation
+## Full installation (non-docker)
 
 You need the [Evennia](https://github.com/evennia/evennia) engine to run. You need Python3.7 and GIT to
 fetch Evennia. Below are copyable instructions for an apt-able
