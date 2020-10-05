@@ -1,6 +1,7 @@
 # EvscapeRoom
 
-A free multiplayer escape-room 'MUD', using Python and [Evennia](https://github.com/evennia/evennia)! Playable in your browser!
+A free single/multiplayer escape-room 'MUD', using Python and [Evennia](https://github.com/evennia/evennia)!
+
 Created for the *MUD Coders Guild game Jam*, April 14-May 15 2019. The theme for
 the jam was "One Room". This ended up as the winning entry! 
 
