@@ -4,8 +4,8 @@ Created for the MUD Coders Guild game Jam, April 14-May 15 2019. The theme for
 the jam was "One Room". This ended up as the winning entry! 
 
 While you can easily set up and run this on your own Evennia install, a running install of the Evscaperoom 
-adventure is found as a side-room on the [official Evennia demo server](http://silvren.com:4281/).
-Just make an account, log in and write `evscaperoom` when you first log in.
+adventure is found as a side-room on the [official Evennia demo server](https://demo.evennia.com/).
+Just make an account, log in and write `evscaperoom` from the first room.
 
 # Introduction
 
