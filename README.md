@@ -11,6 +11,8 @@ Just make an account, log in and write `evscaperoom` in the first room!
 
 # Introduction
 
+![The Jester being jesterly](world/grin_in_the_shadows_by_griatch_art_small.jpg)
+
 There is a pie-eating contest in town. The tricky village Jester has trapped
 you - her greatest pie-eating rivals - in her quirky cabin. If you don't get
 out she'll win by default! 

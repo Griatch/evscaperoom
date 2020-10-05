@@ -420,7 +420,7 @@ class Openable(EvscaperoomObject):
             self.at_close(caller)
 
     def at_open(self, caller):
-        self.msg_char(caller, f"You open *{self.key}")
+        self.msg_char(caller, f"You open *{self.key}.")
 
     def at_already_open(self, caller):
         self.msg_char(caller, f"{self.key.capitalize()} is already open.")
