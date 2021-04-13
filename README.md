@@ -15,10 +15,10 @@ While you can easily set up and run this with your own Evennia install, the Evsc
 is also playable in full on the [official Evennia demo server](https://demo.evennia.com/).
 Just make an account, log in and write `evscaperoom` in the first location!
 
-> Note: The version in the EVennia demo is more up-to-date than the one in this repo since that's the live place
+> Note: The version in the Eennia demo is more up-to-date than the one in this repo since that's the live place
 where people find bugs - and I can't be arsed to set up a git subrepo inside the other repo - I always 
 mess those up. So if you really want the latest version with latest bug fixes you are better off looking at
-the code embedded into the demo at https://github.com/evennia/evdemo/tree/master/evdemo/evscaperoom
+the code embedded into the demo at https://github.com/evennia/evdemo/tree/master/evdemo/evscaperoom.
 
 # Introduction
 
